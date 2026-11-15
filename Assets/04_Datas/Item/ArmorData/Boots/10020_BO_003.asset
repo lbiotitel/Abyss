@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5206ebf2a5c8ecf4f8479aa255c4a6fc, type: 3}
+  m_Name: 10020_BO_003
+  m_EditorClassIdentifier: 
+  itemID: 10020_BO_003
+  itemIcon: {fileID: 21300000, guid: e3689d938d5b4264e86e9c1c8a3e6525, type: 3}
+  itemName: "\uD310\uAE08 \uBD80\uCE20"
+  itemDesc: "\uCCA0\uC81C \uBD80\uCE20\uBCF4\uB2E4 \uB354 \uB2E8\uB2E8\uD558\uB2E4.\n"
+  itemType: 0
+  rarity: 2
+  itemPrice: 500
+  ironStone: 5
+  wood: 0
+  inShop: 1
+  height: 1
+  width: 1
+  equipmentType: 4
+  statContainers:
+  - value: 72
+    statType: 0
+    modeType: 0
+  - value: 18
+    statType: 6
+    modeType: 0
+  - value: 4
+    statType: 9
+    modeType: 0
+  - value: 1
+    statType: 11
+    modeType: 0
+  skills: []

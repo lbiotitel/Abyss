@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637fc72863411b9409112f5ead700fcc, type: 3}
+  m_Name: Scorpion
+  m_EditorClassIdentifier: 
+  unitName: "\uC804\uAC08"
+  animatorController: {fileID: 9100000, guid: e638d54349248354fa6ed15c547e4536, type: 2}
+  model: {fileID: 2256174042332437921, guid: 4f23188609ff8984bb596da9f0dab325, type: 3}
+  statContainers:
+  - value: 30
+    statType: 0
+    modeType: 0
+  - value: 10
+    statType: 4
+    modeType: 0
+  - value: 0
+    statType: 6
+    modeType: 0
+  - value: 1
+    statType: 8
+    modeType: 0
+  - value: 30
+    statType: 1
+    modeType: 0
+  EEnemyType: 0

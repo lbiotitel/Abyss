@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Helmet Datas
+  m_EditorClassIdentifier: 
+  m_GroupName: Helmet Datas
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ac68f20246ecbda418b32b42b10fbc5f
+  m_SerializeEntries:
+  - m_GUID: b59db5cacedfb524cb708f0d0c86edbe
+    m_Address: 10020_HE_003
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b95cde9ded957924ebf61584f1bd35bf
+    m_Address: 10020_HE_002
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3a86b6014c2fc0418962edd6ac00393
+    m_Address: 10020_HE_001
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 353e0ff6b8ba221439ddd05825bd647f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4044e1ce85683be4baa43d2b5d210cc5, type: 2}

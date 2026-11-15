@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 633ed3a1cfa98694089a6340803adc25, type: 3}
+  m_Name: Stage0
+  m_EditorClassIdentifier: 
+  mapName: "\uC232"
+  roomSize: 44
+  width: 1
+  height: 50
+  reqLevel: 0
+  maxRooms: 50
+  roomMaps:
+  - nodeType: 0
+    prefab: {fileID: 6329175544766038417, guid: e1f916c16acceab459e4253e5983b2da, type: 3}
+    weight: 10
+  - nodeType: 2
+    prefab: {fileID: 6329175544766038417, guid: e1f916c16acceab459e4253e5983b2da, type: 3}
+    weight: 70
+  - nodeType: 4
+    prefab: {fileID: 6329175544766038417, guid: 8f5dcb7e8bc9ef942a285d54d5bc7873, type: 3}
+    weight: 20
+  - nodeType: 3
+    prefab: {fileID: 5753809988619667308, guid: 2e916d27a2381924bbafe70305245d8a, type: 3}
+    weight: 15
+  BGM: {fileID: 0}
+  enemySpawn:
+  - enemyData: {fileID: 11400000, guid: b15c0c933b9d2b04897ebdd3e3230d32, type: 2}
+    Position: {x: 0, y: -0.5, z: 22}
+    maxCount: 1
+  - enemyData: {fileID: 11400000, guid: 8820f3db2ca567c43a63ec29e91a1225, type: 2}
+    Position: {x: 0, y: -0.5, z: 22}
+    maxCount: 3
+  - enemyData: {fileID: 11400000, guid: b333f1af8b05bd3458466e3040404d51, type: 2}
+    Position: {x: 0, y: -0.5, z: 22}
+    maxCount: 3
+  - enemyData: {fileID: 11400000, guid: 4c4bd3cd2916b2c46b5de7e201beec9d, type: 2}
+    Position: {x: 0, y: -0.5, z: 22}
+    maxCount: 3
+  itemCodes: []

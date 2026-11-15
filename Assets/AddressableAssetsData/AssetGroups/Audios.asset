@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Audios
+  m_EditorClassIdentifier: 
+  m_GroupName: Audios
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 7f2aba13da528854aa8f2276467bc2d7
+  m_SerializeEntries:
+  - m_GUID: 056ed01be3413ab468fae6c233a8551e
+    m_Address: Parrying SFX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11bcf67cc5e003e418c53ce802dc3dd8
+    m_Address: Step SFX 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a8228c52f31ac549950674690662840
+    m_Address: Dead SFX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 68082446e5f77a248af4cc7a6bbf66f2
+    m_Address: Game BGM
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ff92a5d64a1b6f43812b833f101cc51
+    m_Address: Open Gate SFX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8509247c6bb75f34883cb099692914d5
+    m_Address: Step SFX 2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae35c1ae781e6f348b9c104f49949e2f
+    m_Address: 10010_WE_001_SFX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea8f10b1168df0a46823a1e396f25ecd
+    m_Address: Hit SFX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fa5b9afac53034341a4499b1b3774925
+    m_Address: Equip SFX
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 353e0ff6b8ba221439ddd05825bd647f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: d1f149b0ef86d2f44a9a3c016c15c27b, type: 2}
+    - {fileID: 11400000, guid: 84981a9a95a439f46bb306ea8e8efb60, type: 2}

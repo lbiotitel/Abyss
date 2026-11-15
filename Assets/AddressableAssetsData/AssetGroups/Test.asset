@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Test
+  m_EditorClassIdentifier: 
+  m_GroupName: Test
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 8db695203476e614197d4cbe9dcc72ad
+  m_SerializeEntries:
+  - m_GUID: 03bd5174a64ebd14b83c8317a915bbda
+    m_Address: Assets/TestAssets/TestPrefab/TestPrefab1.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tycoon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 212ba71012080a140b58ab5eb248444e
+    m_Address: TestPrefab1 1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tycoon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 310cabb2b75a968459f1f9a9848882e1
+    m_Address: test_sprite1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tycoon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e7388992b2c1d64f8baa17c42694b01
+    m_Address: Assets/TestAssets/TestPrefab/TestSFX.mp3
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tycoon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 80d4f466b8caa954699c7971b197844b
+    m_Address: Assets/TestAssets/TestPrefab/TestPrefab1 2.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tycoon
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e45bfb04533aa8343914e9b5a21b43c8
+    m_Address: Assets/TestAssets/TestPrefab/TestTest.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Tycoon
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 353e0ff6b8ba221439ddd05825bd647f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: ebdb62410e6dcde469c83cca79f1b1a0, type: 2}
+    - {fileID: 11400000, guid: 9fb489fa6f946444dbeaaf283fc675cb, type: 2}

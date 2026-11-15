@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Weapon Datas
+  m_EditorClassIdentifier: 
+  m_GroupName: Weapon Datas
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 65cd4a38045d5f14a92235b18f5bce57
+  m_SerializeEntries:
+  - m_GUID: 0944eeb17a6f59943b2756a33b67524d
+    m_Address: 10010_WE_004
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ccbc28ce259cd945a07247420d7dc63
+    m_Address: 10010_WE_011
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 20c0603e47f67124da0428301d40e0e1
+    m_Address: 10010_WE_002
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 350082973195d484fb5a6f92e4f5f75e
+    m_Address: 10010_WE_010
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48b6f77ac8cb9bb49919cc7f04199539
+    m_Address: 10010_WE_007
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5986f5ac505dd2349b9de5cd8854b354
+    m_Address: 10010_WE_012
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6748f0a7cc5a8e54ca03004ae1265a94
+    m_Address: 10010_WE_001
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 353e0ff6b8ba221439ddd05825bd647f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: df5015cb8e6b9104b8961d856448257b, type: 2}
+    - {fileID: 11400000, guid: a3c06b26c16c5f74db408e60843da37d, type: 2}

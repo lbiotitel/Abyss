@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd972114f1e86e41a22f6e8a1806dbf, type: 3}
+  m_Name: 10010_WE_010
+  m_EditorClassIdentifier: 
+  itemID: 10010_WE_010
+  itemIcon: {fileID: 21300000, guid: 47f10371d39509446a2b2526564595c2, type: 3}
+  itemName: "\uCC3D"
+  itemDesc: "\uAE30\uC774\uC77C\uB2E4"
+  itemType: 0
+  rarity: 1
+  itemPrice: 100
+  ironStone: 0
+  wood: 0
+  inShop: 1
+  height: 4
+  width: 1
+  equipmentType: 0
+  statContainers:
+  - value: 10
+    statType: 4
+    modeType: 0
+  - value: 1
+    statType: 8
+    modeType: 0
+  skills:
+  - {fileID: 11400000, guid: ca219117cb9762f448c7b9bc8bfe0bef, type: 2}
+  weaponModel: {fileID: 5699416932977409988, guid: 2f4931e12f9384b44b84ec9a774184e4, type: 3}
+  grabPos: {x: 0, y: 0, z: 0}
+  parryingPos: {x: 0, y: 0.31, z: 0}
+  weaponMotionData: {fileID: 11400000, guid: ab030f28a42a5b5479f613758bedd163, type: 2}
+  weaponSFX: 

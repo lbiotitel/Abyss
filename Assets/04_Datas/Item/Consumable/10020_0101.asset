@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f695e2832d7c7e4f9750b7f5b0b18e6, type: 3}
+  m_Name: 10020_0101
+  m_EditorClassIdentifier: 
+  itemID: 10020_0101
+  itemIcon: {fileID: 21300000, guid: f30c847a3a5f2134cb361660c6f3ea23, type: 3}
+  itemName: "\uB0A1\uC740 \uD39C\uB358\uD2B8"
+  itemDesc: "\uC5B4\uBA38\uB2C8\uAC00 \uC8FC\uC2E0 \uD39C\uB358\uD2B8 \uC774\uB2E4.
+    \uD39C\uB358\uD2B8\uB97C \uC4F0\uB2E4\uB4EC\uC73C\uBA74 \uC704\uD5D8\uD560\uB54C
+    \uBE60\uC838\uB098\uAC08 \uC218 \uC788\uB2E4\uACE0 \uB9D0\uC500\uD558\uC168\uB2E4."
+  itemType: 1
+  rarity: 0
+  itemPrice: 0
+  ironStone: 0
+  wood: 0
+  inShop: 0
+  height: 1
+  width: 1
+  effectExcutions:
+  - rid: 3338181098318856192
+  isPermanent: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 3338181098318856192
+      type: {class: ImpactEffect, ns: , asm: Assembly-CSharp}
+      data:
+        subEffects:
+        - rid: 3338181098318856193
+    - rid: 3338181098318856193
+      type: {class: ReturnEffect, ns: , asm: Assembly-CSharp}
+      data: 

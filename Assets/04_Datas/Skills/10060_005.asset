@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe865b75c377114dbf40a6e2a1a4adb, type: 3}
+  m_Name: 10060_005
+  m_EditorClassIdentifier: 
+  skillName: "\uD30C\uC774\uC5B4\uBCFC"
+  skillDesc: "\uD654\uC5FC\uAD6C\uB97C \uB0A0\uB824 \uACF5\uACA9\uC744 \uD569\uB2C8\uB2E4."
+  skillIcon: {fileID: 21300000, guid: 63757e27138372d4786ff4b73e77c4ab, type: 3}
+  manaCost: 0
+  coolTime: 0
+  skillTriggerType: 0
+  skillRange: 0
+  effectList:
+  - rid: 3475026413869858816
+  references:
+    version: 2
+    RefIds:
+    - rid: 3475026413869858816
+      type: {class: ImpactEffect, ns: , asm: Assembly-CSharp}
+      data:
+        subEffects:
+        - rid: 3475026413869858817
+        - rid: 3475026413869858818
+        - rid: 3475026413869858821
+    - rid: 3475026413869858817
+      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+      data:
+        damage: 0
+    - rid: 3475026413869858818
+      type: {class: ParticleEffect, ns: , asm: Assembly-CSharp}
+      data:
+        particlePrefab: {fileID: 4837226097546467391, guid: bbebef906ac39ad4f8c40fe7a0b87537, type: 3}
+        spawnPos: 1
+    - rid: 3475026413869858821
+      type: {class: IgniteEffect, ns: , asm: Assembly-CSharp}
+      data:
+        igniteParticle: {fileID: 1980542181445401082, guid: b54ca32ab38750442b9a40c0acd506d9, type: 3}
+        duration: 10
+        tickDamage: 5
+        tick: 1

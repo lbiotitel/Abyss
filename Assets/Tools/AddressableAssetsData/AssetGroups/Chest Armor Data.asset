@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Chest Armor Data
+  m_EditorClassIdentifier: 
+  m_GroupName: Chest Armor Data
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c394f57028862ed4d95ff86c16dd1700
+  m_SerializeEntries:
+  - m_GUID: 39994fc362058ec4681dafff1813a832
+    m_Address: 10020_AR_003
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 737234baf68f50947bcdade599897341
+    m_Address: 10020_AR_001
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dcf1211c4bdb3b447ac341c4cd4319ce
+    m_Address: 10020_AR_002
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - InGame
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 353e0ff6b8ba221439ddd05825bd647f, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 26a97e344eea7b640a300a24aa84d7b8, type: 2}
