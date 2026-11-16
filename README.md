@@ -10,9 +10,6 @@
 | 사용 기술 | Unity, C#, ScriptableObject, SerializeReference, UniTask |
 | 플레이 영상 | https://youtu.be/fS3M2WcU6ik |
 
-![전투 화면](Docs/battle.png)
-![인벤토리와 장비](Docs/inventory.png)
-
 ## 담당 파트
 
 제가 작성한 코드는 [`Assets/02_Scripts/Biotite`](Assets/02_Scripts/Biotite)에 있습니다.
