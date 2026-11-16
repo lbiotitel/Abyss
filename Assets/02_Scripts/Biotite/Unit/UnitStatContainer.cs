@@ -38,7 +38,7 @@ public class UnitStatContainer
             }
             else
             {
-                statDict[statData.statType] = new ModifireStat(statData.value, statData.statType);
+                statDict[statData.statType] = new ModifierStat(statData.value, statData.statType);
             }
         }
 
@@ -72,21 +72,21 @@ public class UnitStatContainer
 
 
     //스탯 변화를 추가합니다.
-    public void AddModifire(EStatType statType, StatModifire statModifire)
+    public void AddModifier(EStatType statType, StatModifier statModifier)
     {
         if (statDict.TryGetValue(statType, out StatBase stat))
         {
-            stat.AddModifire(statModifire);
+            stat.AddModifier(statModifier);
         }
     }
 
 
     //스탯 변화를 제거합니다.
-    public void RemoveModifire(EStatType statType, StatModifire statModifire)
+    public void RemoveModifier(EStatType statType, StatModifier statModifier)
     {
         if (statDict.TryGetValue(statType, out StatBase stat))
         {
-            stat.RemoveModifire(statModifire);
+            stat.RemoveModifier(statModifier);
         }
     }
 

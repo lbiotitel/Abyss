@@ -1,12 +1,12 @@
 //스탯의 모디파이어를 정의하는 구조체
-public struct StatModifire
+public struct StatModifier
 {
     private float value;
     private EStatModeType statModeType;
     private object resource;
 
 
-    public StatModifire(float value, EStatModeType statModeType, object resource)
+    public StatModifier(float value, EStatModeType statModeType, object resource)
     {
         this.value = value;
         this.statModeType = statModeType;

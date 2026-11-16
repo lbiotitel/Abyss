@@ -50,9 +50,9 @@ public abstract class Unit : MonoBehaviour
 
         if (DMG > 0) DMG = 0;
 
-        StatModifire hpModifire = new StatModifire(DMG, EStatModeType.ADD, this);
+        StatModifier hpModifier = new StatModifier(DMG, EStatModeType.ADD, this);
 
-        unitStats.AddModifire(EStatType.CurrentHP, hpModifire);
+        unitStats.AddModifier(EStatType.CurrentHP, hpModifier);
 
         Debug.Log($"[{gameObject.name}업데이트]현재 HP: {unitStats.GetStatValue(EStatType.CurrentHP)}");
 
@@ -69,9 +69,9 @@ public abstract class Unit : MonoBehaviour
 
         if (damage > 0) damage = 0;
 
-        StatModifire hpModifire = new StatModifire(damage, EStatModeType.ADD, this);
+        StatModifier hpModifier = new StatModifier(damage, EStatModeType.ADD, this);
 
-        unitStats.AddModifire(EStatType.CurrentHP, hpModifire);
+        unitStats.AddModifier(EStatType.CurrentHP, hpModifier);
 
         Debug.Log($"[{gameObject.name}업데이트]현재 HP: {unitStats.GetStatValue(EStatType.CurrentHP)}");
 

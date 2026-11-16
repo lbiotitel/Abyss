@@ -29,8 +29,8 @@ public class EquipmentBase : MonoBehaviour
 
         foreach (var stat in statContainers)
         {
-            StatModifire statModifire = new StatModifire(stat.value,stat.modeType,this);
-            player.UnitStats.AddModifire(stat.statType,statModifire);
+            StatModifier statModifier = new StatModifier(stat.value,stat.modeType,this);
+            player.UnitStats.AddModifier(stat.statType,statModifier);
         }
     }
 
@@ -41,8 +41,8 @@ public class EquipmentBase : MonoBehaviour
 
         foreach (var stat in statContainers)
         {
-            StatModifire statModifire = new StatModifire(stat.value, stat.modeType, this);
-            player.UnitStats.RemoveModifire(stat.statType, statModifire);
+            StatModifier statModifier = new StatModifier(stat.value, stat.modeType, this);
+            player.UnitStats.RemoveModifier(stat.statType, statModifier);
         }
     }
 }

@@ -69,8 +69,8 @@ public class SkillBase
         isCoolTime = true;
         OnSkillActive?.Invoke(this, SkillData.CoolTime);
 
-        StatModifire mpModifire = new StatModifire(-SkillData.ManaCost, EStatModeType.ADD, this);
-        player.UnitStats.AddModifire(EStatType.CurrentMP, mpModifire);
+        StatModifier mpModifier = new StatModifier(-SkillData.ManaCost, EStatModeType.ADD, this);
+        player.UnitStats.AddModifier(EStatType.CurrentMP, mpModifier);
 
         List<Enemy> targetList = Managers.Battle.GetTarget(SkillData.SkillRange);
 

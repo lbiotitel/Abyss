@@ -22,9 +22,9 @@ public abstract class StatBase
 
     public abstract float GetValue();
 
-    public abstract void AddModifire(StatModifire statModifire);
+    public abstract void AddModifier(StatModifier statModifier);
 
-    public abstract void RemoveModifire(StatModifire statModifire);
+    public abstract void RemoveModifier(StatModifier statModifier);
 
     public void TryInvokeOnValueChanged(float prevValue, float newValue)
         => OnStatValueChanged?.Invoke(statType,prevValue, newValue);

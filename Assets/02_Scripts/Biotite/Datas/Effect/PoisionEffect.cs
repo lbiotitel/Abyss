@@ -58,8 +58,8 @@ public class PoisionEffect : EffectBase
                 if (currentStackDict.TryGetValue(target, out int currentStack))
                 { 
                     GameObject.Instantiate(poisionParticle, target.transform.position, Quaternion.identity);
-                    StatModifire statModifire = new StatModifire(-currentStack * tickDamage, EStatModeType.ADD, this);
-                    target.UnitStats.AddModifire(EStatType.CurrentHP, statModifire);
+                    StatModifier statModifier = new StatModifier(-currentStack * tickDamage, EStatModeType.ADD, this);
+                    target.UnitStats.AddModifier(EStatType.CurrentHP, statModifier);
                 }
             }
         }

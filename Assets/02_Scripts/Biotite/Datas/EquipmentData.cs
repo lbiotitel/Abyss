@@ -7,7 +7,7 @@ public class EquipmentData : ItemDataBase
     [Header("Equipment Properties")]
     [SerializeField] protected EEquipmentType equipmentType;
 
-    [Header("Stat Modifire")]
+    [Header("Stat Modifier")]
     [SerializeField] private List<SStatContainer> statContainers;
 
     [Header("Skills")]

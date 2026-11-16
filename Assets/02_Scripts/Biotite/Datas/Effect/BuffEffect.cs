@@ -16,8 +16,8 @@ public class BuffEffect : EffectBase
         this.source = source;
         foreach (var stat in statContainer)
         {
-            StatModifire statModifire = new StatModifire(stat.value,stat.modeType,this);
-            source.UnitStats.AddModifire(stat.statType, statModifire);
+            StatModifier statModifier = new StatModifier(stat.value,stat.modeType,this);
+            source.UnitStats.AddModifier(stat.statType, statModifier);
         }
     }
 
@@ -26,8 +26,8 @@ public class BuffEffect : EffectBase
         if (source == null) return;
         foreach (var stat in statContainer)
         {
-            StatModifire statModifire = new StatModifire(stat.value, stat.modeType, this);
-            source.UnitStats.RemoveModifire(stat.statType, statModifire);
+            StatModifier statModifier = new StatModifier(stat.value, stat.modeType, this);
+            source.UnitStats.RemoveModifier(stat.statType, statModifier);
         }
     }
 }

@@ -35,8 +35,8 @@ public class FrozenEffect : EffectBase
     private async UniTask Frozen(Unit target, float time, CancellationToken cancellationToken)
     {
         GameObject.Instantiate(frozenParticle, target.transform.position, Quaternion.identity);
-        StatModifire statModifire = new StatModifire(-atkSpeedDecrease, EStatModeType.PERCENT_ADD, this);
-        target.UnitStats.AddModifire(EStatType.AtkSpeed, statModifire);
+        StatModifier statModifier = new StatModifier(-atkSpeedDecrease, EStatModeType.PERCENT_ADD, this);
+        target.UnitStats.AddModifier(EStatType.AtkSpeed, statModifier);
 
         await UniTask.Delay(TimeSpan.FromSeconds(time), cancellationToken: cancellationToken);
 
@@ -49,8 +49,8 @@ public class FrozenEffect : EffectBase
     {
         if (uniTaskDict.TryGetValue(target, out var cts))
         {
-            StatModifire statModifire = new StatModifire(atkSpeedDecrease, EStatModeType.PERCENT_ADD, this);
-            target.UnitStats.AddModifire(EStatType.AtkSpeed, statModifire);
+            StatModifier statModifier = new StatModifier(atkSpeedDecrease, EStatModeType.PERCENT_ADD, this);
+            target.UnitStats.AddModifier(EStatType.AtkSpeed, statModifier);
             cts.Cancel();
             cts.Dispose();
             uniTaskDict.Remove(target);

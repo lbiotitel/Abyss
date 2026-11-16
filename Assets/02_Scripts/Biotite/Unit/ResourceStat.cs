@@ -26,18 +26,18 @@ public class ResourceStat : StatBase
     }
 
 
-    public override void AddModifire(StatModifire statModifire)
+    public override void AddModifier(StatModifier statModifier)
     {
         float prevValue = GetValue();
-        baseValue += statModifire.Value;
+        baseValue += statModifier.Value;
         baseValue = Mathf.Min(baseValue, maxValue);
         TryInvokeOnValueChanged(prevValue, baseValue);
     }
 
-    public override void RemoveModifire(StatModifire statModifire)
+    public override void RemoveModifier(StatModifier statModifier)
     {
         float prevValue = GetValue();
-        baseValue -= statModifire.Value;
+        baseValue -= statModifier.Value;
         baseValue = Mathf.Max(baseValue, 0);
         TryInvokeOnValueChanged(prevValue, baseValue);
     }
