@@ -8,7 +8,7 @@
 | 개발 기간 | 2026.06 ~ 2026.07 |
 | 플랫폼 | PC |
 | 사용 기술 | Unity, C#, ScriptableObject, SerializeReference, UniTask |
-| 플레이 영상 | (링크 추가 예정) |
+| 플레이 영상 | https://youtu.be/fS3M2WcU6ik |
 
 <!-- 스크린샷: ![전투 화면](Docs/screenshot_battle.png) -->
 
