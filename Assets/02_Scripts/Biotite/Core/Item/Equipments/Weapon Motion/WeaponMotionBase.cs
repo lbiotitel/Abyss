@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-//ÀåºñÀÇ ¸ğ¼ÇÀ» Á¤ÀÇÇÏ´Â Å¬·¡½º 
+//ì¥ë¹„ì˜ ëª¨ì…˜ì„ ì •ì˜í•˜ëŠ” í´ë˜ìŠ¤ 
 [Serializable]
 public abstract class WeaponMotionBase : MonoBehaviour
 {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-//ÀåºñÀÇ ±âº» ºÎ¸ğ Å¬·¡½ºÀÔ´Ï´Ù.
+//ì¥ë¹„ì˜ ê¸°ë³¸ ë¶€ëª¨ í´ë˜ìŠ¤ì…ë‹ˆë‹¤.
 public class EquipmentBase : MonoBehaviour
 {
     protected Player player;

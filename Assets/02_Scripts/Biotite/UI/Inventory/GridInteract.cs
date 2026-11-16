@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-//ÇöÀç ¾î¶² ±×¸®µå¿¡ ¸¶¿ì½º°¡ °¡ÀÖ´ÂÁö Ã¼Å©ÇÏ°í ±×¸®µå¸¦ ¹Ù²ß´Ï´Ù
+//í˜„ì¬ ì–´ë–¤ ê·¸ë¦¬ë“œì— ë§ˆìš°ìŠ¤ê°€ ê°€ìˆëŠ”ì§€ ì²´í¬í•˜ê³  ê·¸ë¦¬ë“œë¥¼ ë°”ê¿‰ë‹ˆë‹¤
 public class GridInteract : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private MouseObject mouseObject;

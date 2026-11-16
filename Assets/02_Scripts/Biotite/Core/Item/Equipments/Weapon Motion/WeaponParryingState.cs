@@ -28,13 +28,13 @@ public class WeaponParryingState : WeaponStateBase
         {
             parryingStartTrigger = true;
             CanParrying = true;
-            Logger.Log("ÆĞ¸µ ½ÃÀÛ");
+            Logger.Log("íŒ¨ë§ ì‹œì‘");
         }
         if (animationTriggerType == EAnimationTriggerType.PARRYING_END)
         {
             parryingEndTrigger = false;
             CanParrying = false;
-            Logger.Log("ÆĞ¸µ ³¡");
+            Logger.Log("íŒ¨ë§ ë");
         }
     }
 

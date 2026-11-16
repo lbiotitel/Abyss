@@ -57,7 +57,7 @@ public class PlayerInfoUI : MonoBehaviour
     }
 
 
-    //ÃÊ±âÀÇ UI ¼¼ÆÃÀ» ÇÕ´Ï´Ù
+    //ì´ˆê¸°ì˜ UI ì„¸íŒ…ì„ í•©ë‹ˆë‹¤
     private void RefreshAllUI()
     {
         if (unitStatContainer == null) return;
@@ -86,7 +86,7 @@ public class PlayerInfoUI : MonoBehaviour
     }
 
 
-    //½ºÅÈÀÌ º¯°æµÉ ¶§¸¦ °¨ÁöÇÏ¿© Æ¯Á¤ ½ºÅÈÀ» ¾÷µ¥ÀÌÆ® ÇÕ´Ï´Ù.
+    //ìŠ¤íƒ¯ì´ ë³€ê²½ë  ë•Œë¥¼ ê°ì§€í•˜ì—¬ íŠ¹ì • ìŠ¤íƒ¯ì„ ì—…ë°ì´íŠ¸ í•©ë‹ˆë‹¤.
     private void HandleOnStatValueChanged(EStatType statType, float oldValue, float newValue)
     {
         switch (statType)

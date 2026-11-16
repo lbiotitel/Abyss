@@ -9,7 +9,7 @@ public class Uitls : MonoBehaviour
     {
 
 
-        //±×¸®µå »óÀÇ ÁÂÇ¥¸¦ °è»êÇØ¼­ µ¹·ÁÁİ´Ï´Ù
+        //ê·¸ë¦¬ë“œ ìƒì˜ ì¢Œí‘œë¥¼ ê³„ì‚°í•´ì„œ ëŒë ¤ì¤ë‹ˆë‹¤
         public static Vector2 CalculatePositionOnGrid(InventoryItemSlotUI inventoryItem, Vector2Int pos)
         {
             Vector2 position = new Vector2();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//ÆÄÆ¼Å¬µéÀ» Ç®¸µÇÕ´Ï´Ù.
+//íŒŒí‹°í´ë“¤ì„ í’€ë§í•©ë‹ˆë‹¤.
 public class PoolingParticle : MonoBehaviour,IPoolingObject
 {
     public GameObject OriginPrefab { get; set; }

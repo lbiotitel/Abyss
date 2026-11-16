@@ -7,7 +7,7 @@ using static Unity.VisualScripting.Member;
 
 
 
-//Áö¼Ó½Ã°£ µ¿¾È È¿°ú¸¦ Àû¿ëÇÏ´Â ÀÌÆåÆ® ÀÔ´Ï´Ù.
+//ì§€ì†ì‹œê°„ ë™ì•ˆ íš¨ê³¼ë¥¼ ì ìš©í•˜ëŠ” ì´í™íŠ¸ ì…ë‹ˆë‹¤.
 [Serializable]
 public class DurationEffect : EffectExcution
 {

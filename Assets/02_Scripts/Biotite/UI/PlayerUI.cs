@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-//ÇÃ·¹ÀÌ¾îÀÇ mp hpÀÇ ui¸¦ Á¤ÀÇÇÕ´Ï´Ù.
+//í”Œë ˆì´ì–´ì˜ mp hpì˜ uië¥¼ ì •ì˜í•©ë‹ˆë‹¤.
 public class PlayerUI : MonoBehaviour
 {
     [SerializeField] private Image hpSlider;

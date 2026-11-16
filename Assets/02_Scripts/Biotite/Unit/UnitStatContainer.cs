@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 
-//À¯´ÖÀÇ ½ºÅÈÀ» °ü¸®ÇÏ´Â ÄÁÅ×ÀÌ³Ê ÀÔ´Ï´Ù.
+//ìœ ë‹›ì˜ ìŠ¤íƒ¯ì„ ê´€ë¦¬í•˜ëŠ” ì»¨í…Œì´ë„ˆ ì…ë‹ˆë‹¤.
 public class UnitStatContainer
 {
 
@@ -15,7 +15,7 @@ public class UnitStatContainer
     public event Action<EStatType, float, float> OnStatValueChanged;
 
 
-    //½ºÅÈÀ» ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    //ìŠ¤íƒ¯ì„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     public void Init(UnitData data)
     {
         statDict = new Dictionary<EStatType, StatBase>();
@@ -23,7 +23,7 @@ public class UnitStatContainer
     }
 
 
-    //ÇÃ·¹ÀÌ¾î µ¥ÀÌÅÍ¿¡ µî·ÏµÈ µÇ·Î ½ºÅÈÀ» ÃÊ±âÈ­ÇÕ´Ï´Ù
+    //í”Œë ˆì´ì–´ ë°ì´í„°ì— ë“±ë¡ëœ ë˜ë¡œ ìŠ¤íƒ¯ì„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤
     private void InitStats(UnitData unitData)
     {
         List<SStatContainer> container = unitData.StatContainers;
@@ -46,7 +46,7 @@ public class UnitStatContainer
     }
 
 
-    //ÀÚ¿ø ½ºÅÈÀÎÁö ÆÇ´Ü ÇÕ´Ï´Ù
+    //ìì› ìŠ¤íƒ¯ì¸ì§€ íŒë‹¨ í•©ë‹ˆë‹¤
     private bool IsResourceStat(EStatType type)
     {
         bool isHp = type == EStatType.CurrentHP;
@@ -57,7 +57,7 @@ public class UnitStatContainer
     }
 
 
-    //½ºÅÈÀÇ º¯È­¸¦ °¨ÁöÇÏ´Â ÀÌº¥Æ®¸¦ ¹ÙÀÎµù ÇÏ°í º¯È­½Ã ¿ÜºÎ¿¡ ¾Ë¸³´Ï´Ù.
+    //ìŠ¤íƒ¯ì˜ ë³€í™”ë¥¼ ê°ì§€í•˜ëŠ” ì´ë²¤íŠ¸ë¥¼ ë°”ì¸ë”© í•˜ê³  ë³€í™”ì‹œ ì™¸ë¶€ì— ì•Œë¦½ë‹ˆë‹¤.
     private void BindEvents()
     {
         foreach (var dict in statDict)
@@ -66,12 +66,12 @@ public class UnitStatContainer
         }
     }
 
-    //½ºÅÈÀÇº¯È­¸¦ °¨ÁöÇÏ°í ¿ÜºÎ¿¡ ¾Ë¸®´Â ¸Ş¼­µå ÀÔ´Ï´Ù.
+    //ìŠ¤íƒ¯ì˜ë³€í™”ë¥¼ ê°ì§€í•˜ê³  ì™¸ë¶€ì— ì•Œë¦¬ëŠ” ë©”ì„œë“œ ì…ë‹ˆë‹¤.
     private void HandleEvent(EStatType statType, float prevValue, float newValue)
         => OnStatValueChanged?.Invoke(statType, prevValue, newValue);
 
 
-    //½ºÅÈ º¯È­¸¦ Ãß°¡ÇÕ´Ï´Ù.
+    //ìŠ¤íƒ¯ ë³€í™”ë¥¼ ì¶”ê°€í•©ë‹ˆë‹¤.
     public void AddModifire(EStatType statType, StatModifire statModifire)
     {
         if (statDict.TryGetValue(statType, out StatBase stat))
@@ -81,7 +81,7 @@ public class UnitStatContainer
     }
 
 
-    //½ºÅÈ º¯È­¸¦ Á¦°ÅÇÕ´Ï´Ù.
+    //ìŠ¤íƒ¯ ë³€í™”ë¥¼ ì œê±°í•©ë‹ˆë‹¤.
     public void RemoveModifire(EStatType statType, StatModifire statModifire)
     {
         if (statDict.TryGetValue(statType, out StatBase stat))
@@ -91,7 +91,7 @@ public class UnitStatContainer
     }
 
 
-    //Æ¯Á¤ ½ºÅÈÀÇ ÃÖÁ¾ °ªÀ» return ÇÕ´Ï´Ù.
+    //íŠ¹ì • ìŠ¤íƒ¯ì˜ ìµœì¢… ê°’ì„ return í•©ë‹ˆë‹¤.
     public float GetStatValue(EStatType statType)
     {
         if (statDict.TryGetValue(statType, out StatBase stat))

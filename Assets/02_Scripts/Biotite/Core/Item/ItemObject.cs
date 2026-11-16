@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-//ÀÎº¥Åä¸® UI¿¡ ÀÖ´Â ¾ÆÀÌÅÛ ·ÎÁ÷À» ´ã´çÇÕ´Ï´Ù.
+//ì¸ë²¤í† ë¦¬ UIì— ìˆëŠ” ì•„ì´í…œ ë¡œì§ì„ ë‹´ë‹¹í•©ë‹ˆë‹¤.
 public class ItemObject 
 {
     protected ItemDataBase itemData;
@@ -14,7 +14,7 @@ public class ItemObject
 
 
 
-    //¾ÆÀÌÅÛµ¥ÀÌÅÍ¸¦ °¡Áö°í ÃÊ±âÈ­
+    //ì•„ì´í…œë°ì´í„°ë¥¼ ê°€ì§€ê³  ì´ˆê¸°í™”
     public virtual void Init(ItemDataBase itemData, InventoryItemSlotUI slotUI)
     {
         this.itemData = itemData;
@@ -22,6 +22,6 @@ public class ItemObject
     }
 
 
-    //ÀÎº¥Åä¸®¿¡¼­ ¾ÆÀÌÅÛÀ» »ç¿ëÇßÀ» ¶§¸¦ Á¤ÀÇÇÕ´Ï´Ù
+    //ì¸ë²¤í† ë¦¬ì—ì„œ ì•„ì´í…œì„ ì‚¬ìš©í–ˆì„ ë•Œë¥¼ ì •ì˜í•©ë‹ˆë‹¤
     public virtual void UseItem() { }
 }

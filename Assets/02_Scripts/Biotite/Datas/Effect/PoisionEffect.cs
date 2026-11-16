@@ -42,7 +42,7 @@ public class PoisionEffect : EffectBase
     }
 
 
-    //µ¶ Æ½ µ¥¹ÌÁö ½ÇÇà
+    //ë… í‹± ë°ë¯¸ì§€ ì‹¤í–‰
     private async UniTask LoopPoison(Unit target, float time, float tickTime, CancellationToken cancellationToken)
     {
         float elapsedTime = 0f;
@@ -72,7 +72,7 @@ public class PoisionEffect : EffectBase
     }
 
 
-    //Æ¯Á¤ À¯´ÖÀÇ µ¶ÁßÃ¸°ú À¯´ÏÅÂÅ©½º ÁßÁö
+    //íŠ¹ì • ìœ ë‹›ì˜ ë…ì¤‘ì²©ê³¼ ìœ ë‹ˆíƒœí¬ìŠ¤ ì¤‘ì§€
     private void ClearTarget(Unit target)
     {
         if (currentStackDict.ContainsKey(target)) currentStackDict.Remove(target);
@@ -86,7 +86,7 @@ public class PoisionEffect : EffectBase
     }
     
 
-    //µ¶ ÁßÃ¸°ú °¡Áö°í ÀÖ´Â µñ¼Å³Ê¸® ¸ğµÎ Á¦°Å
+    //ë… ì¤‘ì²©ê³¼ ê°€ì§€ê³  ìˆëŠ” ë”•ì…”ë„ˆë¦¬ ëª¨ë‘ ì œê±°
     public override void StopEffect()
     {
         foreach (var cts in uniTaskDict.Values)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-//Áï½Ã ÀÏ¾î³ª´Â ÀÌº¥Æ® ÀÔ´Ï´Ù.
+//ì¦‰ì‹œ ì¼ì–´ë‚˜ëŠ” ì´ë²¤íŠ¸ ì…ë‹ˆë‹¤.
 [Serializable]
 public class ImpactEffect : EffectExcution
 {

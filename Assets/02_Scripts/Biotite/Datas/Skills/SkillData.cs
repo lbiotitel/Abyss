@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-//½ºÅ³ µ¥ÀÌÅÍ¸¦ Á¤ÀÇÇÕ´Ï´Ù.
+//ìŠ¤í‚¬ ë°ì´í„°ë¥¼ ì •ì˜í•©ë‹ˆë‹¤.
 
 [CreateAssetMenu]
 public class SkillData : ScriptableObject
@@ -36,16 +36,16 @@ public class SkillData : ScriptableObject
 
 
 
-//½ºÅ³ÀÌ ¹ßµ¿ÇÒ Æ®¸®°Å Á¤ÀÇ ÀÔ´Ï´Ù.
+//ìŠ¤í‚¬ì´ ë°œë™í•  íŠ¸ë¦¬ê±° ì •ì˜ ì…ë‹ˆë‹¤.
 public enum ESkillTrigger
 { 
-    ATTACK, //°ø°İÇÒ¶§
-    PARRYING, //ÆĞ¸µ ÇÒ¶§
-    ONHIT, //¸ÂÀ»¶§
+    ATTACK, //ê³µê²©í• ë•Œ
+    PARRYING, //íŒ¨ë§ í• ë•Œ
+    ONHIT, //ë§ì„ë•Œ
 }
 
 
-//½ºÅ³ ¹üÀ§
+//ìŠ¤í‚¬ ë²”ìœ„
 public enum ESkillRange
 {
     Single,

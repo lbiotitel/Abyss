@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 
 
-//»óÁ¡¿¡ ¹°°ÇÀ» µî·ÏÇÏ´Â ³ëµå ÀÔ´Ï´Ù.
+//ìƒì ì— ë¬¼ê±´ì„ ë“±ë¡í•˜ëŠ” ë…¸ë“œ ì…ë‹ˆë‹¤.
 public class ShopSlotUI : MonoBehaviour,IPointerClickHandler
 {
 
@@ -44,7 +44,7 @@ public class ShopSlotUI : MonoBehaviour,IPointerClickHandler
     }
 
 
-    //Å¬¸¯½Ã ÀÌº¥Æ®¸¦ ¾Ë·Á ½ÇÁ¦ ·ÎÁ÷Àº Shop¿¡¼­ Ã³¸®ÇÏµµ·Ï ÇÔ
+    //í´ë¦­ì‹œ ì´ë²¤íŠ¸ë¥¼ ì•Œë ¤ ì‹¤ì œ ë¡œì§ì€ Shopì—ì„œ ì²˜ë¦¬í•˜ë„ë¡ í•¨
     public void OnPointerClick(PointerEventData eventData)
     {
         if (isSelling) return;

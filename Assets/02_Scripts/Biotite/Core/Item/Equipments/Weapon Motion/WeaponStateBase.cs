@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-//¾Ö´Ï¸ŞÀÌ¼Ç Æ®¸®°Å Å¸ÀÔÀ» Á¤ÀÇÇÕ´Ï´Ù.
+//ì• ë‹ˆë©”ì´ì…˜ íŠ¸ë¦¬ê±° íƒ€ì…ì„ ì •ì˜í•©ë‹ˆë‹¤.
 public enum EAnimationTriggerType
 { 
     FINISH,
@@ -15,7 +15,7 @@ public enum EAnimationTriggerType
 }
 
 
-//¹«±âÀÇ FSM »óÅÂ¸¦ Á¤ÀÇÇÕ´Ï´Ù.
+//ë¬´ê¸°ì˜ FSM ìƒíƒœë¥¼ ì •ì˜í•©ë‹ˆë‹¤.
 public class WeaponStateBase
 {
     protected Player player;

@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-//È¸º¹È¿°ú¿¡ ´ëÇÑ ±¸Çö ÀÔ´Ï´Ù.
+//íšŒë³µíš¨ê³¼ì— ëŒ€í•œ êµ¬í˜„ ì…ë‹ˆë‹¤.
 [Serializable]
 public class HealEffect : EffectBase
 {

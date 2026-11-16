@@ -19,7 +19,7 @@ public class SkillUI : MonoBehaviour
     }
 
 
-    //NODE UI¸¦ ¹Ì¸® Ç®¸µ ÇÏ¿© ÀúÀåÇÕ´Ï´Ù.
+    //NODE UIë¥¼ ë¯¸ë¦¬ í’€ë§ í•˜ì—¬ ì €ì¥í•©ë‹ˆë‹¤.
     private void InitNodeUIs()
     { 
         for (int i = 0; i < poolingCount; i++)
@@ -32,7 +32,7 @@ public class SkillUI : MonoBehaviour
     }
 
 
-    //½ºÅ³À» ui¿¡ µî·ÏÇÕ´Ï´Ù.
+    //ìŠ¤í‚¬ì„ uiì— ë“±ë¡í•©ë‹ˆë‹¤.
     public void AddSkillUI(SkillBase skill)
     {
         SkillNodUI nodeUI = skillNodUIs.Dequeue();
@@ -42,7 +42,7 @@ public class SkillUI : MonoBehaviour
     }
 
 
-    //½ºÅ³À» ui¿¡¼­ Á¦°ÅÇÕ´Ï´Ù.
+    //ìŠ¤í‚¬ì„ uiì—ì„œ ì œê±°í•©ë‹ˆë‹¤.
     public void RemoveSkillUI(SkillBase skill)
     {
         if (skillNodeUIDict.TryGetValue(skill, out SkillNodUI nodeUI))

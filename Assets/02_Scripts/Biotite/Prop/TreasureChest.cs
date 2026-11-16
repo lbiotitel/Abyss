@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-//º¸¹° »óÀÚÀÌ ·ÎÁ÷ Á¤ÀÇ ÀÔ´Ï´Ù.
+//ë³´ë¬¼ ìƒìì´ ë¡œì§ ì •ì˜ ì…ë‹ˆë‹¤.
 public class TreasureChest : MonoBehaviour,IPointerClickHandler,IPointerEnterHandler,IPointerExitHandler
 {
     [SerializeField] private float interactDistance = 2.0f;
@@ -29,7 +29,7 @@ public class TreasureChest : MonoBehaviour,IPointerClickHandler,IPointerEnterHan
     }
 
 
-    //º¸¹°»óÀÚÀÇ º¸»óÀ» ¸¸µì´Ï´Ù.
+    //ë³´ë¬¼ìƒìì˜ ë³´ìƒì„ ë§Œë“­ë‹ˆë‹¤.
     private void CreateReward()
     {
         List<string> itemCodes = Managers.Reward.GetRandomRewards(2);
@@ -53,10 +53,10 @@ public class TreasureChest : MonoBehaviour,IPointerClickHandler,IPointerEnterHan
     }
 
 
-    //¿­¸®´Â ¾Ö´Ï¸ŞÀÌ¼ÇÀÌ ³¡³¯ ¶§ º¸¹°»óÀÚ ui¸¦ Ç¥½ÃÇÕ´Ï´Ù.
+    //ì—´ë¦¬ëŠ” ì• ë‹ˆë©”ì´ì…˜ì´ ëë‚  ë•Œ ë³´ë¬¼ìƒì uië¥¼ í‘œì‹œí•©ë‹ˆë‹¤.
     public void AnimationFinishedEvent()
     {
-        Logger.Log("º¸¹° »óÀÚ°¡ ¿­·È½À´Ï´Ù.");
+        Logger.Log("ë³´ë¬¼ ìƒìê°€ ì—´ë ¸ìŠµë‹ˆë‹¤.");
         CreateReward();
         ShowUI();
     }

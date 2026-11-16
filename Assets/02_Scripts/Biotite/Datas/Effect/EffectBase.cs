@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//µ¥¹ÌÁö È¿°ú µî ¿©·¯ ÀÌÆåÆ®¸¦ ±¸ÇöÇÕ´Ï´Ù.
+//ë°ë¯¸ì§€ íš¨ê³¼ ë“± ì—¬ëŸ¬ ì´í™íŠ¸ë¥¼ êµ¬í˜„í•©ë‹ˆë‹¤.
 [Serializable]
 public abstract class EffectBase   
 {

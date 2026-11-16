@@ -45,7 +45,7 @@ public class EquipmentSystem : MonoBehaviour
     }
 
 
-    //Àåºñ ÀåÂø
+    //ì¥ë¹„ ì¥ì°©
     private void HandleOnEquippedEquipment(OnEquippedEquipment e)
     {
         ItemObject equipment = e.InventoryItem;
@@ -67,7 +67,7 @@ public class EquipmentSystem : MonoBehaviour
         }
         else
         {
-            //¹æ¾î±¸ ÀåÂø
+            //ë°©ì–´êµ¬ ì¥ì°©
             GameObject armorObject = new GameObject(equipmentData.ItemName);
             Armor newArmor = armorObject.AddComponent<Armor>();
             newArmor.Init(player, equipment);
@@ -98,7 +98,7 @@ public class EquipmentSystem : MonoBehaviour
         }
 
 
-        Logger.Log($"{equipmentData.ItemName} À» ÀåÂøÇÏ¿© ¿ùµå¿¡ »ı¼ºÇß½À´Ï´Ù.");
+        Logger.Log($"{equipmentData.ItemName} ì„ ì¥ì°©í•˜ì—¬ ì›”ë“œì— ìƒì„±í–ˆìŠµë‹ˆë‹¤.");
     }
 
     private WeaponBase CreateWeapon(ItemObject equipment, EquipmentData equipmentData)
@@ -123,10 +123,10 @@ public class EquipmentSystem : MonoBehaviour
     }
 
 
-    //Àåºñ¿¡ ´ã±ä ½ºÅ³µéÀ» ÃÊ±âÈ­ÇÕ´Ï´Ù.
+    //ì¥ë¹„ì— ë‹´ê¸´ ìŠ¤í‚¬ë“¤ì„ ì´ˆê¸°í™”í•©ë‹ˆë‹¤.
     private void InitSkills(EquipmentData equipmentData)
     { 
-        //½ºÅ³µî·Ï
+        //ìŠ¤í‚¬ë“±ë¡
         List<SkillData> skills = equipmentData.SkillDatas;
 
         foreach (var skill in skills)
@@ -136,7 +136,7 @@ public class EquipmentSystem : MonoBehaviour
     }
 
 
-    //µî·ÏµÈ ½ºÅ³µéÀ» ÇØÁ¦ÇÕ´Ï´Ù.
+    //ë“±ë¡ëœ ìŠ¤í‚¬ë“¤ì„ í•´ì œí•©ë‹ˆë‹¤.
 
     private void ReleaseSkills(EquipmentData equipmentData)
     {
@@ -149,14 +149,14 @@ public class EquipmentSystem : MonoBehaviour
     }
 
 
-    //Àåºñ ÇØÁ¦
+    //ì¥ë¹„ í•´ì œ
     private void HandleOnUnequippedEquipment(OnUnEquippedEquipment e)
     {
         EEquipmentType equipmentType = e.equipmentType;
 
         if (equipmentType == EEquipmentType.WEAPON)
         {
-            Logger.Log($"{Weapon.name} À» ÇØÁ¦ ÇÏ¿´½À´Ï´Ù.");
+            Logger.Log($"{Weapon.name} ì„ í•´ì œ í•˜ì˜€ìŠµë‹ˆë‹¤.");
             handModel.transform.SetParent(handPos);
             handModel.transform.localPosition = Vector3.zero;
             Weapon.UnEquip();

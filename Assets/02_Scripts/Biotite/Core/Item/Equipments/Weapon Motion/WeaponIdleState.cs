@@ -45,7 +45,7 @@ public class WeaponIdleState : WeaponStateBase
     }
 
 
-    //idle »óÅÂÀÏ¶§ ÆĞ¸µ ¸ğ¼Ç ½ÃÀÛ
+    //idle ìƒíƒœì¼ë•Œ íŒ¨ë§ ëª¨ì…˜ ì‹œì‘
     private void Parrying()
     {
         stateMachine.ChangeState(weapon.ParryingState);

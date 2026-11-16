@@ -24,7 +24,7 @@ public class EquipmentSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterH
     }
 
 
-    //3°¡Áö °æ¿ì¸¦ °í·ÁÇØ¾ßÇÔ
+    //3ê°€ì§€ ê²½ìš°ë¥¼ ê³ ë ¤í•´ì•¼í•¨
     public void OnPointerClick(PointerEventData eventData)
     {
         if (Managers.Battle.currentState == EBattleState.Battle) return;
@@ -34,7 +34,7 @@ public class EquipmentSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEnterH
     }
 
 
-    //¿©±â´Â ui¸¸ ±×¸®°í ½ÇÁ¦ ·ÎÁ÷Àº equipment system¿¡¼­ ³»ºÎÀûÀ¸·Î Ã³¸®
+    //ì—¬ê¸°ëŠ” uië§Œ ê·¸ë¦¬ê³  ì‹¤ì œ ë¡œì§ì€ equipment systemì—ì„œ ë‚´ë¶€ì ìœ¼ë¡œ ì²˜ë¦¬
     public void Equip(EquipmentData equipmentData)
     {
         this.equipmentData = equipmentData;

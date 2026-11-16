@@ -8,7 +8,7 @@ public class AnimationEventNotifier : MonoBehaviour
     public event Action<EAnimationTriggerType> OnAnimTrigger;
 
 
-    //¾Ö´Ï¸ÞÀÌ¼Ç ÀÌº¥Æ® Æ®¸®°Å
+    //ì• ë‹ˆë©”ì´ì…˜ ì´ë²¤íŠ¸ íŠ¸ë¦¬ê±°
     public void AnimFinAniished(EAnimationTriggerType animationTriggerType)
         => OnAnimTrigger?.Invoke(animationTriggerType); 
     

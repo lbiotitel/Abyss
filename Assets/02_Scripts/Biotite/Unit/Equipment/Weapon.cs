@@ -6,7 +6,7 @@ using static UnityEngine.ParticleSystem;
 
 public class WeaponBase : EquipmentBase
 {
-    //µ¥ÀÌÅÍ
+    //ë°ì´í„°
     public WeaponData WeaponData { get; private set; }
     private Animator handAnimator;
 
@@ -24,7 +24,7 @@ public class WeaponBase : EquipmentBase
     public int CurrentAttackMotionIndex { get; set; }
 
 
-    //¹«±â¸¦ ÃÊ±âÈ­ ÇÕ´Ï´Ù.
+    //ë¬´ê¸°ë¥¼ ì´ˆê¸°í™” í•©ë‹ˆë‹¤.
     public override void Init(Player player,ItemObject itemObject)
     {
         base.Init(player, itemObject);
@@ -33,7 +33,7 @@ public class WeaponBase : EquipmentBase
         if (WeaponData.WeaponMotionData == null)
         {
             UnEquip();
-            Logger.LogError($"{equipmentData.ItemName}¿¡ ¹«±â ¸ğ¼ÇÀÌ µî·ÏµÇÁö ¾Ê¾Ò½À´Ï´Ù.");
+            Logger.LogError($"{equipmentData.ItemName}ì— ë¬´ê¸° ëª¨ì…˜ì´ ë“±ë¡ë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.");
             return;
         }
         handAnimator.runtimeAnimatorController = WeaponData.WeaponMotionData.WeaponAnimator;
@@ -46,7 +46,7 @@ public class WeaponBase : EquipmentBase
     }
 
 
-    //ÆĞ¸µ¿¡ ÇÊ¿äÇÑ ÀÌÆåÆ®, ÀÌÆåÆ® À§Ä¡ ÀÌº¥Æ® ¹ÙÀÎµù µîÀ» ÇÕ´Ï´Ù.
+    //íŒ¨ë§ì— í•„ìš”í•œ ì´í™íŠ¸, ì´í™íŠ¸ ìœ„ì¹˜ ì´ë²¤íŠ¸ ë°”ì¸ë”© ë“±ì„ í•©ë‹ˆë‹¤.
     private void InitParrying()
     {
         parryingPos = new GameObject(WeaponData.ItemName + "ParryingPos").transform;
@@ -63,7 +63,7 @@ public class WeaponBase : EquipmentBase
 
 
 
-    //ÆĞ¸µÀÌ ¼º°ø ‰çÀ» ¶§ ÀÌÆåÆ® »ı¼º
+    //íŒ¨ë§ì´ ì„±ê³µ ë¬ì„ ë•Œ ì´í™íŠ¸ ìƒì„±
     private void HandleOnParryingSuccedEvent(OnParryingSucceed e)
     {
         GameObject particle = Managers.Object.PoolingSystem.GetObject(parryingParticlePrefab, parryingPos.position, Quaternion.identity);
@@ -71,7 +71,7 @@ public class WeaponBase : EquipmentBase
     }
 
 
-    //¹«±âÀÇ »óÅÂ ¸Ó½ÅÀ» ÃÊ±âÈ­ ÇÕ´Ï´Ù.
+    //ë¬´ê¸°ì˜ ìƒíƒœ ë¨¸ì‹ ì„ ì´ˆê¸°í™” í•©ë‹ˆë‹¤.
     private void InitStateMachine()
     {
         stateMachine = new WeaponStateMachine();
@@ -87,7 +87,7 @@ public class WeaponBase : EquipmentBase
 
     private void InitAttackStates()
     {
-        //°ø°İ¿¡ °üÇÑ ¸ğµç ¾Ö´Ï¸ŞÀÌ¼Ç »óÅÂ¸¦ ¸¸µé°í ¼ø¼­´ë·Î ÀúÀåÇÕ´Ï´Ù.
+        //ê³µê²©ì— ê´€í•œ ëª¨ë“  ì• ë‹ˆë©”ì´ì…˜ ìƒíƒœë¥¼ ë§Œë“¤ê³  ìˆœì„œëŒ€ë¡œ ì €ì¥í•©ë‹ˆë‹¤.
         AttackStates = new List<WeaponAttackState>();
         string[] attackAnimes = WeaponData.WeaponMotionData.AtkAnimNames;
         MaxAttackMotionIndex = attackAnimes.Length;
@@ -95,7 +95,7 @@ public class WeaponBase : EquipmentBase
 
         if (attackAnimes == null || attackAnimes.Length == 0)
         {
-            Logger.LogError($"{WeaponData.ItemName}¿¡ µî·ÏµÈ °ø°İ ¸ğ¼ÇÀÌ ¾ø½À´Ï´Ù.");
+            Logger.LogError($"{WeaponData.ItemName}ì— ë“±ë¡ëœ ê³µê²© ëª¨ì…˜ì´ ì—†ìŠµë‹ˆë‹¤.");
             return;
         }
 
@@ -112,13 +112,13 @@ public class WeaponBase : EquipmentBase
 
 
 
-    //½ÇÁ¦ ¾Ö´Ï¸ŞÀÌ¼ÇÀÌ °ø°İ Áß µ¥¹ÌÁö¸¦ ÁÙ ¼ö  ÀÖÀ» ¶§ ¹ßµ¿ µË´Ï´Ù.
+    //ì‹¤ì œ ì• ë‹ˆë©”ì´ì…˜ì´ ê³µê²© ì¤‘ ë°ë¯¸ì§€ë¥¼ ì¤„ ìˆ˜  ìˆì„ ë•Œ ë°œë™ ë©ë‹ˆë‹¤.
     private void HandleAnimTrigger(EAnimationTriggerType animationTriggerType)
      => stateMachine.CurrentState?.AnimationFishedTrigger(animationTriggerType);
 
 
 
-    //Àåºñ ÇØÁ¦
+    //ì¥ë¹„ í•´ì œ
     public override void UnEquip()
     {
         AnimationEventNotifier notifire = handAnimator.GetComponent<AnimationEventNotifier>();
@@ -137,7 +137,7 @@ public class WeaponBase : EquipmentBase
     }
 
 
-    //ÆĞ¸µÀÌ °¡´ÉÇÑÁö ¿©ºÎ¸¦ ¸®ÅÏ ÇÕ´Ï´Ù.
+    //íŒ¨ë§ì´ ê°€ëŠ¥í•œì§€ ì—¬ë¶€ë¥¼ ë¦¬í„´ í•©ë‹ˆë‹¤.
     public bool IsParrying()
     {
         if (stateMachine.CurrentState == ParryingState)

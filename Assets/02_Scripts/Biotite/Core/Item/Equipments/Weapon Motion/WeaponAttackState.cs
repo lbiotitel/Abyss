@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//¹«±âÀÇ °ø°İ »óÅÂ¸¦ Á¤ÀÇÇÕ´Ï´Ù. 
+//ë¬´ê¸°ì˜ ê³µê²© ìƒíƒœë¥¼ ì •ì˜í•©ë‹ˆë‹¤. 
 public class WeaponAttackState : WeaponStateBase
 {
     protected bool attackAnimTrigger = false;
@@ -47,13 +47,13 @@ public class WeaponAttackState : WeaponStateBase
     }
 
 
-    //°ø°İ Å¸ÀÌ¹ÖÀ» Ã¼Å©ÇÕ´Ï´Ù
+    //ê³µê²© íƒ€ì´ë°ì„ ì²´í¬í•©ë‹ˆë‹¤
     private void CheckAttack()
     {
         if (attackAnimTrigger)
         {
             attackAnimTrigger = false;
-            //»ó´ë¸¦ °ñ¶ó ³ÖÀ¸¸é ehla
+            //ìƒëŒ€ë¥¼ ê³¨ë¼ ë„£ìœ¼ë©´ ehla
             Managers.Event.NotifyEvent<OnAttack>(new OnAttack {  });
         }
     }

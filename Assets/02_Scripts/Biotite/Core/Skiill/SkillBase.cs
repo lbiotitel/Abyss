@@ -5,7 +5,7 @@ using UnityEngine;
 
 
 
-//½ºÅ³·ÎÁ÷¿¡ °üÇÑ Á¤ÀÇ ÀÔ´Ï´Ù.
+//ìŠ¤í‚¬ë¡œì§ì— ê´€í•œ ì •ì˜ ì…ë‹ˆë‹¤.
 public class SkillBase
 {
     private Player player;
@@ -22,7 +22,7 @@ public class SkillBase
     }
 
 
-    //µ¥ÀÌÅÍ¸¦ Æ®¸®°Å¿¡ µû¶ó ÀÌº¥Æ®À» ¹ÙÀÎµù ÇÕ´Ï´Ù.
+    //ë°ì´í„°ë¥¼ íŠ¸ë¦¬ê±°ì— ë”°ë¼ ì´ë²¤íŠ¸ì„ ë°”ì¸ë”© í•©ë‹ˆë‹¤.
     private void InitEvent()
     {
         ESkillTrigger skillTrigger = SkillData.SkillTrigger;
@@ -42,7 +42,7 @@ public class SkillBase
     }
 
 
-    //½ºÅ³ ÇØÁ¦
+    //ìŠ¤í‚¬ í•´ì œ
     public void Release()
     {
         Managers.Event.RemoveEvent<OnAttack>(DoSkill);
@@ -52,14 +52,14 @@ public class SkillBase
 
 
 
-    //½ºÅ³ ÀÌº¥Æ®¿¡ µû¶ó ½ºÅ³ »ç¿ë È£Ãâ
+    //ìŠ¤í‚¬ ì´ë²¤íŠ¸ì— ë”°ë¼ ìŠ¤í‚¬ ì‚¬ìš© í˜¸ì¶œ
 
     private void DoSkill(OnAttack e) => DoSkill();
     private void DoSkill(OnParryingSucceed e) => DoSkill();
     private void DoSkill(OnPlayerHit e) => DoSkill();
 
 
-    //½ºÅ³À» ½ÇÇà
+    //ìŠ¤í‚¬ì„ ì‹¤í–‰
     private void DoSkill()
     {
         if (isCoolTime || !CheckManaCost()) return;
@@ -85,7 +85,7 @@ public class SkillBase
 
 
 
-    //½ºÅ³ ÃÊ±âÈ­
+    //ìŠ¤í‚¬ ì´ˆê¸°í™”
     public void ResetSkill()
     {
         isCoolTime = false;
@@ -97,13 +97,13 @@ public class SkillBase
     }
 
 
-    //¸¶³ª°¡ ÃæºĞÇÑÁö È®ÀÎÇÕ´Ï´Ù.
+    //ë§ˆë‚˜ê°€ ì¶©ë¶„í•œì§€ í™•ì¸í•©ë‹ˆë‹¤.
     private bool CheckManaCost()
     {
         float currentMp = player.UnitStats.GetStatValue(EStatType.CurrentMP);
         if (currentMp < SkillData.ManaCost)
         {
-            Debug.Log("½ºÅ³ »ç¿ë¿¡ ÇÊ¿äÇÑ ¸¶³ª°¡ ºÎÁ·ÇÕ´Ï´Ù.");
+            Debug.Log("ìŠ¤í‚¬ ì‚¬ìš©ì— í•„ìš”í•œ ë§ˆë‚˜ê°€ ë¶€ì¡±í•©ë‹ˆë‹¤.");
             return false;
         }
 
@@ -112,7 +112,7 @@ public class SkillBase
 
 
 
-    //ÄğÅ¸ÀÓ
+    //ì¿¨íƒ€ì„
     private async UniTaskVoid CoolTime(System.Threading.CancellationToken cancellationToken)
     {
         bool isCanceled = await UniTask.WaitForSeconds(SkillData.CoolTime, cancellationToken: cancellationToken).SuppressCancellationThrow();

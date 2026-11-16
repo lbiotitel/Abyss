@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 
-//Àåºñ ui ÀÔ´Ï´Ù.
+//ì¥ë¹„ ui ì…ë‹ˆë‹¤.
 public class EquipmentUI : MonoBehaviour
 {
     [SerializeField] private EquipmentSlotUI[] equipmentSlotUIs;
@@ -36,7 +36,7 @@ public class EquipmentUI : MonoBehaviour
 
 
 
-    //¾ÆÀÌÅÛ ÀåÂø ½ºÅÈ¿Ã¸®´Â ·ÎÁ÷ 3°¡Áö °æ¿ì
+    //ì•„ì´í…œ ì¥ì°© ìŠ¤íƒ¯ì˜¬ë¦¬ëŠ” ë¡œì§ 3ê°€ì§€ ê²½ìš°
     private void HandleEquippedEquipment(EquipmentSlotUI equipmentSlotUI, InventoryItemSlotUI mouseItemSlotUI)
     {
         ItemObject mouseItem = mouseItemSlotUI != null ? mouseItemSlotUI.itemObject : null;
@@ -49,8 +49,8 @@ public class EquipmentUI : MonoBehaviour
 
             if (mouseItem == null)
             {
-                //¸¶¿ì½º¿¡ ÅÛÀÌ ¾ø°í Å¬¸¯ ÇßÀ» ½Ã ÀåÂø ÇØÁ¦
-                Logger.Log($"{currentEData.ItemName} ÀåÂø ÇØÁ¦");
+                //ë§ˆìš°ìŠ¤ì— í…œì´ ì—†ê³  í´ë¦­ í–ˆì„ ì‹œ ì¥ì°© í•´ì œ
+                Logger.Log($"{currentEData.ItemName} ì¥ì°© í•´ì œ");
 
                 InventoryItemSlotUI inventoryItemSlotUI = Managers.Object.CreateInventoryItem(currentEData);
 
@@ -63,7 +63,7 @@ public class EquipmentUI : MonoBehaviour
 
             else
             {
-                //¸¶¿ì½º¿¡ ÅÛÀÌ ÀÖ°í ÀåÂø±îÁö ÇÏ°íÀÖÀ» ¶§ ½º¿Ò
+                //ë§ˆìš°ìŠ¤ì— í…œì´ ìˆê³  ì¥ì°©ê¹Œì§€ í•˜ê³ ìˆì„ ë•Œ ìŠ¤ì™‘
                 if (mouseItem.ItemData.ItemType != EItemType.Equipment) return;
                 EquipmentData mouseEData = mouseItem.ItemData as EquipmentData;
 
@@ -77,7 +77,7 @@ public class EquipmentUI : MonoBehaviour
                 InventoryItemSlotUI currentEquipmentSlotUi = Managers.Object.CreateInventoryItem(currentEData);
                 MouseObject.Instance.ClearItem();
                 MouseObject.Instance.AssignItem(currentEquipmentSlotUi);
-                Logger.Log($"{currentEData.ItemName} ÇØÁ¦ ¹× {mouseEData.ItemName} ±³Ã¼ ÀåÂø");
+                Logger.Log($"{currentEData.ItemName} í•´ì œ ë° {mouseEData.ItemName} êµì²´ ì¥ì°©");
 
                 Managers.Event.NotifyEvent<OnEquippedEquipment>(new OnEquippedEquipment { InventoryItem = mouseItem });
             }
@@ -85,7 +85,7 @@ public class EquipmentUI : MonoBehaviour
         }
 
 
-        //¸¶¿ì½º¿¡ ÅÛÀÌÀÖ°í ÇöÀç ÀåÂøµÈ ¾ÆÀÌÅÛÀÌ ¾øÀ» ¶§ ±×³É ÀåÂø
+        //ë§ˆìš°ìŠ¤ì— í…œì´ìˆê³  í˜„ì¬ ì¥ì°©ëœ ì•„ì´í…œì´ ì—†ì„ ë•Œ ê·¸ëƒ¥ ì¥ì°©
         if (mouseItem == null) return;
         if (mouseItem.ItemData.ItemType != EItemType.Equipment) return;
 
@@ -93,7 +93,7 @@ public class EquipmentUI : MonoBehaviour
 
         if (equipmentSlotUI.EquipmentType != newEquipmentData.EquipmentType) return;
 
-        Logger.Log($"{newEquipmentData.ItemName} »õ·Î ÀåÂø");
+        Logger.Log($"{newEquipmentData.ItemName} ìƒˆë¡œ ì¥ì°©");
 
         equipmentDict.Add(equipmentSlotUI.EquipmentType, mouseItem);
         equipmentSlotUI.Equip(newEquipmentData);

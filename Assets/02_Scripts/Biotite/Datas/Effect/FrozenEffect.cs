@@ -31,7 +31,7 @@ public class FrozenEffect : EffectBase
     }
 
 
-    //ºù°á ½ÇÇà
+    //ë¹™ê²° ì‹¤í–‰
     private async UniTask Frozen(Unit target, float time, CancellationToken cancellationToken)
     {
         GameObject.Instantiate(frozenParticle, target.transform.position, Quaternion.identity);
@@ -44,7 +44,7 @@ public class FrozenEffect : EffectBase
     }
 
 
-    //Æ¯Á¤ À¯´ÖÀÇ °ø°İ¼Óµµ ¿øº¹°ú ÀúÀåµÈ À¯´ÏÅÂ½ºÅ© Á¦°Å
+    //íŠ¹ì • ìœ ë‹›ì˜ ê³µê²©ì†ë„ ì›ë³µê³¼ ì €ì¥ëœ ìœ ë‹ˆíƒœìŠ¤í¬ ì œê±°
     private void ClearTarget(Unit target)
     {
         if (uniTaskDict.TryGetValue(target, out var cts))
@@ -58,7 +58,7 @@ public class FrozenEffect : EffectBase
     }
 
 
-    //°¡Áö°í ÀÖ´Â µñ¼Å³Ê¸® ¸ğµÎ Á¦°Å
+    //ê°€ì§€ê³  ìˆëŠ” ë”•ì…”ë„ˆë¦¬ ëª¨ë‘ ì œê±°
     public override void StopEffect()
     {
         foreach (var cts in uniTaskDict)

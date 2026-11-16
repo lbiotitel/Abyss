@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 
 
-//½ºÅ³ ½½·Ô ui ÀÔ´Ï´Ù
+//ìŠ¤í‚¬ ìŠ¬ë¡¯ ui ìž…ë‹ˆë‹¤
 public class SkillNodUI : MonoBehaviour
 {
     [SerializeField] private Image skillIconBG;

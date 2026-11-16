@@ -20,7 +20,7 @@ public class ExitDoor : MonoBehaviour
             
             int direction = distance.z >= 0 ? -1 : 1;
 
-            // ÇöÀç ¹æÀÇ »óÅÂ¸¦ ¾Ë¸®°í º¯°æÇÏ±â
+            // í˜„ì¬ ë°©ì˜ ìƒíƒœë¥¼ ì•Œë¦¬ê³  ë³€ê²½í•˜ê¸°
             Managers.Event.NotifyEvent<OnNextRoom>(new OnNextRoom { moveDir = direction });
             return;
         }

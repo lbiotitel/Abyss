@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-//¹æ¾î±¸¿¡ ´ëÇÑ Á¤ÀÇ ÀÔ´Ï´Ù.
+//ë°©ì–´êµ¬ì— ëŒ€í•œ ì •ì˜ ì…ë‹ˆë‹¤.
 public class Armor : EquipmentBase
 {
 

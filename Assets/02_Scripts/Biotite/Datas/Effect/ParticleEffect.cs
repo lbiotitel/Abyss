@@ -12,7 +12,7 @@ public enum EParticleSpawnPos
 }
 
 
-//ÆÄÆ¼Å¬À» »ı¼ºÇÏ´Â ÀÌÆåÆ® ÀÔ´Ï´Ù.
+//íŒŒí‹°í´ì„ ìƒì„±í•˜ëŠ” ì´í™íŠ¸ ì…ë‹ˆë‹¤.
 [Serializable]
 public class ParticleEffect : EffectBase
 {

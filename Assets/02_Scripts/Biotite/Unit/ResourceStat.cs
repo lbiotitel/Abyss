@@ -2,7 +2,7 @@ using UnityEngine;
 
 
 
-//hp,mpµî »ç¿ëÇÏ´Â ½ºÅÈ¿¡ ´ëÇÑ Á¤ÀÇ ÀÔ´Ï´Ù.
+//hp,mpë“± ì‚¬ìš©í•˜ëŠ” ìŠ¤íƒ¯ì— ëŒ€í•œ ì •ì˜ ì…ë‹ˆë‹¤.
 public class ResourceStat : StatBase
 {
     public ResourceStat(float value, EStatType statType) : base(value, statType)

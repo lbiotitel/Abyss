@@ -5,14 +5,14 @@ using UnityEngine;
 
 
 
-//µ¥¹ÌÁö È¿°ú¿¡ ´ëÇÑ ±¸Çö ÀÔ´Ï´Ù.
+//ë°ë¯¸ì§€ íš¨ê³¼ì— ëŒ€í•œ êµ¬í˜„ ì…ë‹ˆë‹¤.
 [Serializable]
 public class DamageEffect : EffectBase
 {
     [SerializeField] private float damage;
     public override void Excute(Unit source, Unit target)
     {
-        Logger.Log($"{source}°¡ µ¥¹ÌÁö¸¦ ÁØ´Ù. {target} ¿¡°Ô");
+        Logger.Log($"{source}ê°€ ë°ë¯¸ì§€ë¥¼ ì¤€ë‹¤. {target} ì—ê²Œ");
         UnitStatContainer unitStat = source.UnitStats;
 
         target.TakeDamage(source);
