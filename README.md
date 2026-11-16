@@ -18,22 +18,22 @@
 
 | 파트 | 주요 파일 |
 |---|---|
-| 스킬 · 효과 시스템 | `Core/Skiill/SkillBase.cs`, `SkillSystem.cs`, `Datas/Skills/SkillData.cs`, `Datas/Effect/*` |
+| 스킬, 효과 시스템 | `Core/Skiill/SkillBase.cs`, `SkillSystem.cs`, `Datas/Skills/SkillData.cs`, `Datas/Effect/*` |
 | 스탯 시스템 | `Unit/StatBase.cs`, `ModifireStat.cs`, `ResourceStat.cs`, `UnitStatContainer.cs` |
-| 무기 FSM · 패링 | `Core/Item/Equipments/Weapon Motion/*` |
+| 무기 FSM, 패링 | `Core/Item/Equipments/Weapon Motion/*` |
 | 격자 인벤토리 | `UI/Inventory/InventorySystem.cs`, `MouseObject.cs` |
 | 장비 장착 | `Unit/Equipment/EquipmentSystem.cs`, `UI/EquipmentUI/*` |
 | 기타 | 매니저 초기화(`Managers.cs`), 오브젝트 풀링(`System/Pooling`), 디버그 콘솔(`System/ConsoleSystem.cs`) |
 
 ## 주요 구현
 
-### 스킬 · 효과 시스템
+### 스킬, 효과 시스템
 
 언리얼 GAS가 발동(Ability)과 효과(Effect)를 나누는 방식을 참고해서, 스킬은 "언제 발동하는지"만 맡고 실제 효과는 데이터로 조합하게 만들었습니다.
 
 ```
 SkillData (ScriptableObject)
- ├─ 마나 · 쿨타임 · 범위 · 발동 트리거 (ATTACK / PARRYING / ONHIT)
+ ├─ 마나, 쿨타임, 범위, 발동 트리거 (ATTACK / PARRYING / ONHIT)
  └─ List<EffectExcution>          ← 실행 방식
       ├─ ImpactEffect   : 즉시 실행
       └─ DurationEffect : 지속 시간 동안 틱마다 실행
@@ -49,10 +49,10 @@ SkillData (ScriptableObject)
 ### 스탯 시스템
 
 - `ModifireStat`: 기본값에 수정자(`ADD`, `PERCENT_ADD`)를 쌓아서 계산합니다. 값이 바뀌었을 때만 다시 계산합니다(dirty 플래그).
-- `ResourceStat`: HP · MP처럼 깎이고 차는 스탯입니다. 최대값 스탯의 변경 이벤트를 구독해서, 장비로 최대 HP가 줄어도 현재 HP가 넘치지 않게 맞춥니다.
+- `ResourceStat`: HP, MP처럼 깎이고 차는 스탯입니다. 최대값 스탯의 변경 이벤트를 구독해서, 장비로 최대 HP가 줄어도 현재 HP가 넘치지 않게 맞춥니다.
 - 수정자는 출처(`Resource`)를 함께 저장해서, 장비를 벗으면 그 장비가 준 수정자만 지웁니다.
 
-### 무기 FSM · 패링
+### 무기 FSM, 패링
 
 - `WeaponStateMachine`이 대기, 공격, 패링 상태를 관리합니다.
 - 애니메이션 이벤트(`ATTACK`, `PARRYING_START`, `PARRYING_END`, `FINISH`)를 현재 상태에 전달해서 타격 판정과 상태 전환 시점을 맞춥니다.
