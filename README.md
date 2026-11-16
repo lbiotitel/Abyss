@@ -10,7 +10,8 @@
 | 사용 기술 | Unity, C#, ScriptableObject, SerializeReference, UniTask |
 | 플레이 영상 | https://youtu.be/fS3M2WcU6ik |
 
-<!-- 스크린샷: ![전투 화면](Docs/screenshot_battle.png) -->
+![전투 화면](Docs/battle.png)
+![인벤토리와 장비](Docs/inventory.png)
 
 ## 담당 파트
 
@@ -18,8 +19,8 @@
 
 | 파트 | 주요 파일 |
 |---|---|
-| 스킬, 효과 시스템 | `Core/Skiill/SkillBase.cs`, `SkillSystem.cs`, `Datas/Skills/SkillData.cs`, `Datas/Effect/*` |
-| 스탯 시스템 | `Unit/StatBase.cs`, `ModifireStat.cs`, `ResourceStat.cs`, `UnitStatContainer.cs` |
+| 스킬, 효과 시스템 | `Core/Skill/SkillBase.cs`, `SkillSystem.cs`, `Datas/Skills/SkillData.cs`, `Datas/Effect/*` |
+| 스탯 시스템 | `Unit/StatBase.cs`, `ModifierStat.cs`, `ResourceStat.cs`, `UnitStatContainer.cs` |
 | 무기 FSM, 패링 | `Core/Item/Equipments/Weapon Motion/*` |
 | 격자 인벤토리 | `UI/Inventory/InventorySystem.cs`, `MouseObject.cs` |
 | 장비 장착 | `Unit/Equipment/EquipmentSystem.cs`, `UI/EquipmentUI/*` |
@@ -34,7 +35,7 @@
 ```
 SkillData (ScriptableObject)
  ├─ 마나, 쿨타임, 범위, 발동 트리거 (ATTACK / PARRYING / ONHIT)
- └─ List<EffectExcution>          ← 실행 방식
+ └─ List<EffectExecution>         ← 실행 방식
       ├─ ImpactEffect   : 즉시 실행
       └─ DurationEffect : 지속 시간 동안 틱마다 실행
            └─ List<EffectBase>    ← 실제 효과
@@ -46,11 +47,19 @@ SkillData (ScriptableObject)
 - 같은 효과 구조를 소모품(`ConsumableData`)에도 그대로 써서, 포션도 효과 조합으로 만듭니다.
 - 프로젝트 규모를 고려해 GAS의 Tag 시스템과 네트워크 예측은 넣지 않았습니다.
 
+전체 스킬 10종 중 6종은 코드 수정 없이 기존 효과 조합만으로 추가했습니다.
+
 ### 스탯 시스템
 
-- `ModifireStat`: 기본값에 수정자(`ADD`, `PERCENT_ADD`)를 쌓아서 계산합니다. 값이 바뀌었을 때만 다시 계산합니다(dirty 플래그).
+- `ModifierStat`: 기본값에 수정자(`ADD`, `PERCENT_ADD`)를 쌓아서 계산합니다. 값이 바뀌었을 때만 다시 계산합니다(dirty 플래그).
 - `ResourceStat`: HP, MP처럼 깎이고 차는 스탯입니다. 최대값 스탯의 변경 이벤트를 구독해서, 장비로 최대 HP가 줄어도 현재 HP가 넘치지 않게 맞춥니다.
 - 수정자는 출처(`Resource`)를 함께 저장해서, 장비를 벗으면 그 장비가 준 수정자만 지웁니다.
+
+### 무기 FSM, 패링
+
+- `WeaponStateMachine`이 대기, 공격, 패링 상태를 관리합니다. 상태마다 진입, 종료, 전환 조건을 나눠 둡니다.
+- 애니메이션 이벤트(`ATTACK`, `PARRYING_START`, `PARRYING_END`, `FINISH`)는 `AnimationEventNotifier`를 거쳐 현재 상태에 전달되고, 이걸로 타격 판정과 상태 전환 시점을 맞춥니다.
+- 패링은 `PARRYING_START`와 `PARRYING_END` 사이에서만 성공합니다.
 
 ### 무기별 애니메이션 데이터
 
@@ -62,12 +71,6 @@ SkillData (ScriptableObject)
 - 장착을 해제하면 기본 손 Animator로 되돌리고, 애니메이션 이벤트 구독도 해제합니다.
 
 새 무기는 모션 데이터 에셋만 만들어 연결하면 FSM 코드를 수정하지 않고 추가할 수 있습니다.
-
-### 무기 FSM, 패링
-
-- `WeaponStateMachine`이 대기, 공격, 패링 상태를 관리합니다.
-- 애니메이션 이벤트(`ATTACK`, `PARRYING_START`, `PARRYING_END`, `FINISH`)를 현재 상태에 전달해서 타격 판정과 상태 전환 시점을 맞춥니다.
-- 패링은 `PARRYING_START`와 `PARRYING_END` 사이에서만 성공합니다.
 
 ### 격자 인벤토리
 
