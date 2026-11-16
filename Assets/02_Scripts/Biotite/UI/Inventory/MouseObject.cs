@@ -28,7 +28,7 @@ public class MouseObject : Singleton<MouseObject>
 
 
 
-    //�������� ȸ����ŵ�ϴ�.
+    //아이템을 회전시킵니다.
     public void RotateItem()
     {
         if (SelectedItem == null) return;
@@ -41,7 +41,7 @@ public class MouseObject : Singleton<MouseObject>
 
 
 
-    //���콺 ������Ʈ�� �������� �Ҵ��մϴ�.
+    //마우스 오브젝트에 아이템을 할당합니다.
     public void AssignItem(InventoryItemSlotUI inventoryItem)
     {
         SelectedItem = inventoryItem;
@@ -71,7 +71,7 @@ public class MouseObject : Singleton<MouseObject>
         }
     }
    
-    //�׸��� �󿡼� �������� Ŭ������ ��
+    //그리드 위에서 아이템을 클릭했을 때
     private void ItemClicked()
     {
         if (Input.GetMouseButtonDown(0))
@@ -82,18 +82,18 @@ public class MouseObject : Singleton<MouseObject>
 
             if (SelectedItem == null)
             {
-                //�������� ���������ʰ� �׳� �Ⱦ�
+                //들고 있는 아이템이 없으면 클릭한 아이템을 집음
                 SelectedItem = SelectedItemGrid.PickUpItem(gridPos);
 
                 if (SelectedItem != null)
                 {
                     AssignItem(SelectedItem);
-                    Debug.Log($"{SelectedItem.name} Ŭ�� ��");
+                    Debug.Log($"{SelectedItem.name} 클릭 됨");
                 }
             }
             else
             {
-                //�������������� ��ġ�� ������Ʈ�� �ִٸ� �� ������Ʈ�� ��ġ�� �ٲٰ� ��ġġ ������ �� ��ġ�� ����
+                //들고 있는 아이템을 놓을 자리에 다른 아이템이 있다면 서로 위치를 바꿈
                 InventoryItemSlotUI overlapItem = null;
                 if (SelectedItemGrid.PlaceItem(SelectedItem, gridPos, ref overlapItem))
                 {
@@ -112,7 +112,7 @@ public class MouseObject : Singleton<MouseObject>
     }
 
 
-    //���� Ŭ���� �׸��� ��ǥ�� ������
+    //현재 마우스가 가리키는 그리드 좌표를 가져옴
     private Vector2Int GetTileGridPosition()
     {
         Vector2 position = Input.mousePosition;
@@ -128,13 +128,13 @@ public class MouseObject : Singleton<MouseObject>
 
 
 
-    //��������ġ �ǽð� ����
+    //들고 있는 아이템 위치를 마우스에 맞춰 실시간 갱신
     private void ItemDrag()
         => rectTransform.position = Input.mousePosition;
 
 
 
-    //���õ� �������� Ŭ���� �մϴ�.
+    //선택된 아이템을 제거합니다.
     public void ClearItem()
     {
         Destroy(SelectedItem.gameObject);

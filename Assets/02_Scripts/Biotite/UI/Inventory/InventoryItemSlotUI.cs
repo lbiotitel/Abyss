@@ -11,7 +11,7 @@ public class InventoryItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEn
     private Image itemImage;
     private bool rotated = false;
 
-    // ������ġ(Null üũ) �߰�: �����Ͱ� ���� ���� 0�� ��ȯ�Ͽ� ���� ȣ�� ����
+    // 안전장치(Null 체크): 데이터가 없으면 0을 반환해서 오류를 막습니다.
     public int Width
     {
         get
@@ -56,10 +56,10 @@ public class InventoryItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEn
 
     public void Rotate()
     {
-        // �����Ͱ� ���� ���¿��� ȸ���� �õ��ϸ� ����
+        // 데이터가 없는 상태에서 회전을 시도하면 무시합니다.
         if (itemObject == null || itemObject.ItemData == null) return;
 
-        // ������Ƽ getter ��� ���� �����͸� ���� ���Ͽ� ���� ������Ƽ ȣ�� ����
+        // 가로세로 크기가 같으면 회전할 필요가 없으므로 원본 데이터로 비교해서 무시합니다.
         if (itemObject.ItemData.Width == itemObject.ItemData.Height) return;
 
         rotated = !rotated;
@@ -71,7 +71,7 @@ public class InventoryItemSlotUI : MonoBehaviour,IPointerClickHandler,IPointerEn
 
 
 
-    //���콺 ������ Ŭ���� �������� ����մϴ�. �̶� ���콺�� ������ �ȵ�
+    //마우스 우클릭 시 아이템을 사용합니다. 이때 아이템을 집은 상태면 안 됩니다.
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)

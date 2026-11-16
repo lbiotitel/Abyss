@@ -3,7 +3,7 @@ using UnityEngine;
 
 
 
-//�׽�Ʈ�� ���� ��Ʋ �ý��� �Դϴ�.
+//테스트를 위한 배틀 시스템입니다.
 public class TestBattleSystem : MonoBehaviour
 {
     [SerializeField] private Transform spawnPos;

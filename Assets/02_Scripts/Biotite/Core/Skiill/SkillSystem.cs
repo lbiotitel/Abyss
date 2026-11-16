@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 
 
-//��ų�� �����ϴ� Ŭ���� �Դϴ�.
+//플레이어의 스킬을 등록하고 관리하는 클래스입니다.
 public class SkillSystem : MonoBehaviour
 {
     
@@ -24,7 +22,7 @@ public class SkillSystem : MonoBehaviour
 
 
 
-    //��ų ���
+    //스킬 등록
     public void AddSkill(SkillData skillData)
     {
         SkillBase skill = new SkillBase();
@@ -32,12 +30,12 @@ public class SkillSystem : MonoBehaviour
         skills.Add(skill);
         skillUI.AddSkillUI(skill);
         skill.OnSkillActive += HandleSkillUseEvent;
-        Logger.Log($"{skillData.SkillName} ��ų�� ��ϵǾ����ϴ�.");
+        Logger.Log($"{skillData.SkillName} 스킬이 등록되었습니다.");
     }
 
 
 
-    //��ϵ� ��ų ����
+    //등록된 스킬 제거
     public void RemoveSkill(SkillData skillData) 
     {
         for (int i = skills.Count - 1; i >= 0; i--)
@@ -48,7 +46,7 @@ public class SkillSystem : MonoBehaviour
                 skillUI.RemoveSkillUI(skills[i]);
                 skills[i].Release();
                 skills.RemoveAt(i);
-                Logger.Log($"{skillData.SkillName} ��ų�� �����Ǿ����ϴ�.");
+                Logger.Log($"{skillData.SkillName} 스킬이 제거되었습니다.");
             }
         }
     }
@@ -66,7 +64,7 @@ public class SkillSystem : MonoBehaviour
 
 
 
-    //��ų�� ������ ���� �̺�Ʈ�� �ٷ�ϴ�.
+    //스킬이 발동되면 쿨타임 UI를 갱신합니다.
     public void HandleSkillUseEvent(SkillBase skill, float coolTime)
     {
         skillUI.CoolTime(skill, coolTime);

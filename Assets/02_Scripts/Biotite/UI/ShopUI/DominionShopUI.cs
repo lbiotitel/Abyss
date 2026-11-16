@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 
 
-//������ ���� �����Դϴ�.
+//영지 상점에 대한 정의입니다.
 public class DominionShopUI : MonoBehaviour
 {
     [SerializeField] private Button exitButton;
@@ -27,7 +27,7 @@ public class DominionShopUI : MonoBehaviour
         Show();
     }
 
-    //������ �ʿ��� �����͸� ĳ���ϰ� �ʱ�ȭ�մϴ�.
+    //상점에 필요한 데이터를 캐싱하고 초기화합니다.
     public void Init()
     {
         var equipmentList = Managers.Resource.GetAssets<EquipmentData>();
@@ -42,7 +42,7 @@ public class DominionShopUI : MonoBehaviour
 
 
 
-    //������ ������ ������ Ǯ�� �� �Ӵϴ�.
+    //상점 슬롯 UI를 미리 만들어 둡니다.
     private void InitShopNodeUIs()
     {
         shopNodeUIs = new List<ShopSlotUI>();
@@ -64,11 +64,11 @@ public class DominionShopUI : MonoBehaviour
     }
 
 
-    //Ư�� ������ Ŭ���ҽ� ���� ����� shop���� Ŭ���� �����͸� �޾� ó�� �մϴ�.
+    //슬롯을 클릭하면 슬롯에서 넘겨준 아이템 데이터를 받아 구매를 처리합니다.
     private void HandleClickedEvent(ShopSlotUI slot, ItemDataBase itemData)
     {
 
-        Logger.Log($"{itemData.ItemName}�� �����ҷ��� �մϴ�.");
+        Logger.Log($"{itemData.ItemName}을(를) 구매하려고 합니다.");
 
         int currentGold = Managers.Game.Commodity.gold;
         if (currentGold >= itemData.ItemPrice)
@@ -82,7 +82,7 @@ public class DominionShopUI : MonoBehaviour
     }
 
 
-    //�־��� �����Ϳ��� ������ŭ �������� �̽��ϴ�.
+    //주어진 데이터에서 개수만큼 랜덤으로 뽑습니다.
     private List<T> GenerateRandomEquipmentData<T>(int count) where T : ItemDataBase
     {
         List<T> result = new();
@@ -112,7 +112,7 @@ public class DominionShopUI : MonoBehaviour
 
 
 
-    //�������� ���� �����͸� ������ ���Կ��� �����͸� �ѱ�ϴ�.
+    //랜덤으로 뽑은 장비 데이터를 상점 슬롯에 넘깁니다.
     private void ShopLogic()
     {
         List<EquipmentData> randomEquipmentDatas =

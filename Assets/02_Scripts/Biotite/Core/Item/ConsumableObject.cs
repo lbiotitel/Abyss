@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//�Ҹ�ǰ�����ۿ� ���� �����Դϴ�.
+//소모품 아이템의 사용을 정의합니다.
 public class ConsumableObject : ItemObject
 {
     private ConsumableData consumableData;
@@ -17,7 +17,7 @@ public class ConsumableObject : ItemObject
 
     public override void UseItem()
     {
-        Logger.Log($"{consumableData.ItemName}�� ����߽��ϴ�.");
+        Logger.Log($"{consumableData.ItemName}을(를) 사용했습니다.");
         Player player = Managers.Game.InGame.Player;
         foreach(var effect in consumableData.EffectExcutions)
         {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//�Ҹ�ǰ ������
+//소모품 데이터
 
 [CreateAssetMenu]
 public class ConsumableData : ItemDataBase

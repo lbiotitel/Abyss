@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 
 
-//�����۵��� ������ �����մϴ�.
+//아이템의 툴팁을 표시합니다.
 public class ToolTipUI : MonoBehaviour
 {
     [SerializeField] private RectTransform tooltipRect;
@@ -77,7 +77,7 @@ public class ToolTipUI : MonoBehaviour
     }
 
 
-    //�������� ���� �κ��� �׸��ϴ�.
+    //아이템의 공통 정보를 그립니다.
     public void ShowItemCommonData(ItemDataBase itemData)
     {
         itemImage.sprite = itemData.ItemIcon;
@@ -100,7 +100,7 @@ public class ToolTipUI : MonoBehaviour
     }
 
 
-    //��� �ִ� ���� �����͸� �׸��ϴ�.
+    //장비가 가진 스킬 정보를 그립니다.
     public void ShowSkillData(EquipmentData equipmentData)
     {
         List<SkillData> skillDatas = equipmentData.SkillDatas;

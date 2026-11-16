@@ -1,6 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
-// UI �� �̺�Ʈ �ý��� üũ�� ���� �߰� �ʿ�
+// UI 및 이벤트 시스템 체크를 위해 추가 필요
 using UnityEngine.EventSystems;
 
 public class InputManager : MonoBehaviour

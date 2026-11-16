@@ -6,7 +6,7 @@ using UnityEngine;
 
 
 
-//�ΰ��ӿ��� �÷��̾ ������ �ִ� ��ȭ�� ������ �մϴ�.
+//인게임에서 플레이어가 가지고 있는 재화를 표시합니다.
 public class PlayerResourcesUI : MonoBehaviour
 {
     [SerializeField] private TMP_Text goldText;
