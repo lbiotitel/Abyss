@@ -14,9 +14,9 @@ public class SkillBase
 
     public event Action<SkillBase, float> OnSkillActive;
 
-    public void Init(Player palyer, SkillData skillData)
+    public void Init(Player player, SkillData skillData)
     {
-        this.player = palyer;
+        this.player = player;
         this.SkillData = skillData;
         InitEvent();
     }
@@ -78,7 +78,7 @@ public class SkillBase
         {
             foreach (var target in targetList)
             {
-                effect.ExcuteEffect(player, target);
+                effect.ExecuteEffect(player, target);
             }
         }
     }

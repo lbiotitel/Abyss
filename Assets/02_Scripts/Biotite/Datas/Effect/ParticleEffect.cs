@@ -20,7 +20,7 @@ public class ParticleEffect : EffectBase
     [SerializeField] private EParticleSpawnPos spawnPos;
 
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         GameObject particle = Managers.Object.PoolingSystem.GetObject(particlePrefab,Vector3.zero,Quaternion.identity);
 

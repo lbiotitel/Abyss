@@ -7,12 +7,12 @@ public class ModifierStat : StatBase
 
     private List<StatModifier> statModifiers;
     private bool isDirty = true;
-    private float cashedValue = 0;
+    private float cachedValue = 0;
 
     public override float GetValue()
     {
-        if (isDirty) cashedValue = CalcModifier();
-        return cashedValue;
+        if (isDirty) cachedValue = CalcModifier();
+        return cachedValue;
     }
 
 

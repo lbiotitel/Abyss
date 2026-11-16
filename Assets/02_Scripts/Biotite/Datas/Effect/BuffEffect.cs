@@ -11,7 +11,7 @@ public class BuffEffect : EffectBase
     [SerializeField] List<SStatContainer> statContainer;
     private Unit source = null;
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         this.source = source;
         foreach (var stat in statContainer)

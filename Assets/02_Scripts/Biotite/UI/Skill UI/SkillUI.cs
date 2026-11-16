@@ -5,16 +5,16 @@ using UnityEngine;
 public class SkillUI : MonoBehaviour
 {
     [SerializeField] private Transform gridTransform;
-    [SerializeField] private SkillNodUI skillNodeUIPrefab;
+    [SerializeField] private SkillNodeUI skillNodeUIPrefab;
     [SerializeField] private int poolingCount = 13;
 
-    private Dictionary<SkillBase, SkillNodUI> skillNodeUIDict;
-    private Queue<SkillNodUI> skillNodUIs;
+    private Dictionary<SkillBase, SkillNodeUI> skillNodeUIDict;
+    private Queue<SkillNodeUI> skillNodUIs;
 
     public void Init()
     {
-        skillNodeUIDict = new Dictionary<SkillBase, SkillNodUI>();    
-        skillNodUIs = new Queue<SkillNodUI>();
+        skillNodeUIDict = new Dictionary<SkillBase, SkillNodeUI>();    
+        skillNodUIs = new Queue<SkillNodeUI>();
         InitNodeUIs();
     }
 
@@ -24,7 +24,7 @@ public class SkillUI : MonoBehaviour
     { 
         for (int i = 0; i < poolingCount; i++)
         {
-            SkillNodUI nodeUI = Instantiate(skillNodeUIPrefab);
+            SkillNodeUI nodeUI = Instantiate(skillNodeUIPrefab);
             skillNodUIs.Enqueue(nodeUI);
             nodeUI.transform.SetParent(gridTransform);
             nodeUI.Hide();
@@ -35,7 +35,7 @@ public class SkillUI : MonoBehaviour
     //스킬을 ui에 등록합니다.
     public void AddSkillUI(SkillBase skill)
     {
-        SkillNodUI nodeUI = skillNodUIs.Dequeue();
+        SkillNodeUI nodeUI = skillNodUIs.Dequeue();
         nodeUI.Init(skill.SkillData.SkillIcon);
         nodeUI.Show();
         skillNodeUIDict.Add(skill, nodeUI);
@@ -45,7 +45,7 @@ public class SkillUI : MonoBehaviour
     //스킬을 ui에서 제거합니다.
     public void RemoveSkillUI(SkillBase skill)
     {
-        if (skillNodeUIDict.TryGetValue(skill, out SkillNodUI nodeUI))
+        if (skillNodeUIDict.TryGetValue(skill, out SkillNodeUI nodeUI))
         {
             nodeUI.Hide();
             skillNodUIs.Enqueue(nodeUI);
@@ -56,7 +56,7 @@ public class SkillUI : MonoBehaviour
 
     public void CoolTime(SkillBase targetSkill, float t)
     {
-        if (skillNodeUIDict.TryGetValue(targetSkill, out SkillNodUI nodeUI))
+        if (skillNodeUIDict.TryGetValue(targetSkill, out SkillNodeUI nodeUI))
         {
             nodeUI.CoolTime(t);
         }

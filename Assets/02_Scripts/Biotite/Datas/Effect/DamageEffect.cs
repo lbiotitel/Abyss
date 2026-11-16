@@ -10,7 +10,7 @@ using UnityEngine;
 public class DamageEffect : EffectBase
 {
     [SerializeField] private float damage;
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         Logger.Log($"{source}가 데미지를 준다. {target} 에게");
         UnitStatContainer unitStat = source.UnitStats;

@@ -9,7 +9,7 @@ using static Unity.VisualScripting.Member;
 
 //지속시간 동안 효과를 적용하는 이펙트 입니다.
 [Serializable]
-public class DurationEffect : EffectExcution
+public class DurationEffect : EffectExecution
 {
     [Header("Duration Effect Properties")]
     [SerializeField] private float duration;
@@ -18,7 +18,7 @@ public class DurationEffect : EffectExcution
     [SerializeReference,SubclassSelector] private List<EffectBase> subEffects;
     private bool isStop = false;
 
-    public override void ExcuteEffect(Unit source, Unit target)
+    public override void ExecuteEffect(Unit source, Unit target)
     {
         isStop = false;
         Run(source, target).Forget();
@@ -32,7 +32,7 @@ public class DurationEffect : EffectExcution
         
         foreach (var effect in subEffects)
         {
-            effect.Excute(source, target);
+            effect.Execute(source, target);
         }
 
         while (t <= duration)
@@ -43,7 +43,7 @@ public class DurationEffect : EffectExcution
             {
                 foreach (var effect in subEffects)
                 {
-                    effect.Excute(source, target);
+                    effect.Execute(source, target);
                 }
                 tickT = 0;
             }

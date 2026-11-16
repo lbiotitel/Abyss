@@ -19,9 +19,9 @@ public class ConsumableObject : ItemObject
     {
         Logger.Log($"{consumableData.ItemName}을(를) 사용했습니다.");
         Player player = Managers.Game.InGame.Player;
-        foreach(var effect in consumableData.EffectExcutions)
+        foreach(var effect in consumableData.EffectExecutions)
         {
-            effect.ExcuteEffect(player,null);
+            effect.ExecuteEffect(player,null);
         }
 
         Managers.Event.NotifyEvent<OnItemSlotMouseExited>(new OnItemSlotMouseExited { });

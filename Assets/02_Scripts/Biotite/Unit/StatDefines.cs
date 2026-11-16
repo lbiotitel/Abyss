@@ -31,7 +31,7 @@ public enum EStatType
     EvasionRate,
     PenetrationRate,
     DamageCorrection,
-    PoisionResistance,
+    PoisonResistance,
     BleedResistance,
     IgniteResistance,
     FrozenResistance,

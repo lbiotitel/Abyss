@@ -38,8 +38,8 @@ public class WeaponBase : EquipmentBase
         }
         handAnimator.runtimeAnimatorController = WeaponData.WeaponMotionData.WeaponAnimator;
 
-        AnimationEventNotifier notifire = handAnimator.GetComponent<AnimationEventNotifier>();
-        notifire.OnAnimTrigger += HandleAnimTrigger;
+        AnimationEventNotifier notifier = handAnimator.GetComponent<AnimationEventNotifier>();
+        notifier.OnAnimTrigger += HandleAnimTrigger;
 
         InitParrying();
         InitStateMachine();
@@ -54,7 +54,7 @@ public class WeaponBase : EquipmentBase
         parryingPos.SetParent(modelTr);
         parryingPos.localPosition = WeaponData.ParryingPos;
         parryingParticlePrefab = Managers.Resource.GetAsset<GameObject>(KeyDefines.ResourceKey.PARRYING_PARTICLE);
-        Managers.Event.AddEvent<OnParryingSucceed>(HandleOnParryingSuccedEvent);
+        Managers.Event.AddEvent<OnParryingSucceed>(HandleOnParryingSucceedEvent);
     }
 
 
@@ -64,7 +64,7 @@ public class WeaponBase : EquipmentBase
 
 
     //패링이 성공 됬을 때 이펙트 생성
-    private void HandleOnParryingSuccedEvent(OnParryingSucceed e)
+    private void HandleOnParryingSucceedEvent(OnParryingSucceed e)
     {
         GameObject particle = Managers.Object.PoolingSystem.GetObject(parryingParticlePrefab, parryingPos.position, Quaternion.identity);
         particle.transform.localScale = Vector3.one * 0.4f;
@@ -114,26 +114,26 @@ public class WeaponBase : EquipmentBase
 
     //실제 애니메이션이 공격 중 데미지를 줄 수  있을 때 발동 됩니다.
     private void HandleAnimTrigger(EAnimationTriggerType animationTriggerType)
-     => stateMachine.CurrentState?.AnimationFishedTrigger(animationTriggerType);
+     => stateMachine.CurrentState?.AnimationFinishedTrigger(animationTriggerType);
 
 
 
     //장비 해제
     public override void UnEquip()
     {
-        AnimationEventNotifier notifire = handAnimator.GetComponent<AnimationEventNotifier>();
-        notifire.OnAnimTrigger -= HandleAnimTrigger;
+        AnimationEventNotifier notifier = handAnimator.GetComponent<AnimationEventNotifier>();
+        notifier.OnAnimTrigger -= HandleAnimTrigger;
         handAnimator.runtimeAnimatorController = null;
-        Managers.Event.RemoveEvent<OnParryingSucceed>(HandleOnParryingSuccedEvent);
+        Managers.Event.RemoveEvent<OnParryingSucceed>(HandleOnParryingSucceedEvent);
         base.UnEquip();
     }
 
 
     private void OnDestroy()
     {
-        AnimationEventNotifier notifire = handAnimator.GetComponent<AnimationEventNotifier>();
-        notifire.OnAnimTrigger -= HandleAnimTrigger;
-        Managers.Event.RemoveEvent<OnParryingSucceed>(HandleOnParryingSuccedEvent);
+        AnimationEventNotifier notifier = handAnimator.GetComponent<AnimationEventNotifier>();
+        notifier.OnAnimTrigger -= HandleAnimTrigger;
+        Managers.Event.RemoveEvent<OnParryingSucceed>(HandleOnParryingSucceedEvent);
     }
 
 

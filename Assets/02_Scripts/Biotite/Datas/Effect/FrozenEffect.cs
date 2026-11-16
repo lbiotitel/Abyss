@@ -16,7 +16,7 @@ public class FrozenEffect : EffectBase
     private Dictionary<Unit, CancellationTokenSource> uniTaskDict = new Dictionary<Unit, CancellationTokenSource>();
 
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         if (uniTaskDict.TryGetValue(target, out var oldUnitask))
         {

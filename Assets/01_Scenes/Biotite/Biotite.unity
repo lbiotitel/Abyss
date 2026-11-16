@@ -13902,7 +13902,7 @@ MonoBehaviour:
   evasionRateText: {fileID: 105151015}
   penetrationRateText: {fileID: 9210050}
   damageCorrectionText: {fileID: 1090113800}
-  poisionResistanceText: {fileID: 918770868}
+  poisonResistanceText: {fileID: 918770868}
   igniteResistanceText: {fileID: 1160281290}
   bleedResistanceText: {fileID: 1146129599}
   frozenResistanceText: {fileID: 1492502325}

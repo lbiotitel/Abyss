@@ -6,10 +6,10 @@ using System.Threading;
 using UnityEngine;
 
 [Serializable]
-public class PoisionEffect : EffectBase
+public class PoisonEffect : EffectBase
 {
     [Header("Poison Properties")]
-    [SerializeField] private GameObject poisionParticle;
+    [SerializeField] private GameObject poisonParticle;
     [SerializeField] private float duration;
     [SerializeField] private float tick;
     [SerializeField] private int tickDamage;
@@ -18,7 +18,7 @@ public class PoisionEffect : EffectBase
     private Dictionary<Unit, int> currentStackDict = new Dictionary<Unit, int>();
     private Dictionary<Unit, CancellationTokenSource> uniTaskDict = new Dictionary<Unit, CancellationTokenSource>();
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         if (currentStackDict.TryGetValue(target, out int stack))
         {
@@ -57,7 +57,7 @@ public class PoisionEffect : EffectBase
 
                 if (currentStackDict.TryGetValue(target, out int currentStack))
                 { 
-                    GameObject.Instantiate(poisionParticle, target.transform.position, Quaternion.identity);
+                    GameObject.Instantiate(poisonParticle, target.transform.position, Quaternion.identity);
                     StatModifier statModifier = new StatModifier(-currentStack * tickDamage, EStatModeType.ADD, this);
                     target.UnitStats.AddModifier(EStatType.CurrentHP, statModifier);
                 }

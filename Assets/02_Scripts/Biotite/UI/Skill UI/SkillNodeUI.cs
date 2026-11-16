@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 
 //스킬 슬롯 ui 입니다
-public class SkillNodUI : MonoBehaviour
+public class SkillNodeUI : MonoBehaviour
 {
     [SerializeField] private Image skillIconBG;
     [SerializeField] private Image skillIcon;

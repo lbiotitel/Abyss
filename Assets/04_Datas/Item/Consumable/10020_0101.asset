@@ -26,7 +26,7 @@ MonoBehaviour:
   inShop: 0
   height: 1
   width: 1
-  effectExcutions:
+  effectExecutions:
   - rid: 3338181098318856192
   isPermanent: 1
   references:

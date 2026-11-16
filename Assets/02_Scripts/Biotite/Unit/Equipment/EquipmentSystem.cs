@@ -19,7 +19,7 @@ public class EquipmentSystem : MonoBehaviour
     private Armor pants;
     private Armor shield;
     private Armor boots;
-    private Armor grove;
+    private Armor glove;
 
     //skill system
     [SerializeField] private SkillSystem skillSystem;
@@ -89,7 +89,7 @@ public class EquipmentSystem : MonoBehaviour
                     boots = newArmor;
                     break;
                 case EEquipmentType.GLOVE:
-                    grove = newArmor;
+                    glove = newArmor;
                     break;
                 case EEquipmentType.SHIELD:
                     shield = newArmor;
@@ -183,7 +183,7 @@ public class EquipmentSystem : MonoBehaviour
                     unequippedArmor = boots;
                     break;
                 case EEquipmentType.GLOVE:
-                    unequippedArmor = grove;
+                    unequippedArmor = glove;
                     break;
                 case EEquipmentType.SHIELD:
                     unequippedArmor = shield;

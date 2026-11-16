@@ -108,7 +108,7 @@ public class InventorySystem : MonoBehaviour
 
         inventoryItem.OriginPos = pos;
 
-        Vector2 position = Uitls.Grid.CalculatePositionOnGrid(inventoryItem, pos);
+        Vector2 position = InventoryUtils.Grid.CalculatePositionOnGrid(inventoryItem, pos);
         itemRect.localPosition = position;
 
         return true;

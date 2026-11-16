@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Uitls : MonoBehaviour
+public class InventoryUtils : MonoBehaviour
 {
 
     public class Grid

@@ -19,7 +19,7 @@ public class IgniteEffect : EffectBase
 
 
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         if (target.IsDead) return;
         if (uniTaskDict.TryGetValue(target, out var oldUnitask))

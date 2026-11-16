@@ -336,21 +336,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.016666668
-    functionName: AnimFinAniished
+    functionName: AnimFinished
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 2
     messageOptions: 0
   - time: 0.06666667
-    functionName: AnimFinAniished
+    functionName: AnimFinished
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
   - time: 0.1
-    functionName: AnimFinAniished
+    functionName: AnimFinished
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

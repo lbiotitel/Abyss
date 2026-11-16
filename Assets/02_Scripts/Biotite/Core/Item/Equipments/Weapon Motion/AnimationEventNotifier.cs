@@ -9,7 +9,7 @@ public class AnimationEventNotifier : MonoBehaviour
 
 
     //애니메이션 이벤트 트리거
-    public void AnimFinAniished(EAnimationTriggerType animationTriggerType)
+    public void AnimFinished(EAnimationTriggerType animationTriggerType)
         => OnAnimTrigger?.Invoke(animationTriggerType); 
     
 }

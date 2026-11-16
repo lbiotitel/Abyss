@@ -8,6 +8,6 @@ using UnityEngine;
 [Serializable]
 public abstract class EffectBase   
 {
-    public abstract void Excute(Unit source, Unit target);
+    public abstract void Execute(Unit source, Unit target);
     public abstract void StopEffect();
 }

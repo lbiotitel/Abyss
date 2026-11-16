@@ -21,9 +21,9 @@ public class WeaponParryingState : WeaponStateBase
 
 
 
-    public override void AnimationFishedTrigger(EAnimationTriggerType animationTriggerType)
+    public override void AnimationFinishedTrigger(EAnimationTriggerType animationTriggerType)
     {
-        base.AnimationFishedTrigger(animationTriggerType);
+        base.AnimationFinishedTrigger(animationTriggerType);
         if (animationTriggerType == EAnimationTriggerType.PARRYING_START)
         {
             parryingStartTrigger = true;

@@ -27,6 +27,6 @@ public class WeaponStateMachine
         => CurrentState?.Update();
 
     public void AnimTrigger(EAnimationTriggerType animationTriggerType)
-        => CurrentState?.AnimationFishedTrigger(animationTriggerType);
+        => CurrentState?.AnimationFinishedTrigger(animationTriggerType);
   
 }

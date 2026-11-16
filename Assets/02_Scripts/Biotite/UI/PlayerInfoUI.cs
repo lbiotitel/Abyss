@@ -22,7 +22,7 @@ public class PlayerInfoUI : MonoBehaviour
     [SerializeField] private TMP_Text evasionRateText;
     [SerializeField] private TMP_Text penetrationRateText;
     [SerializeField] private TMP_Text damageCorrectionText;
-    [SerializeField] private TMP_Text poisionResistanceText;
+    [SerializeField] private TMP_Text poisonResistanceText;
     [SerializeField] private TMP_Text igniteResistanceText;
     [SerializeField] private TMP_Text bleedResistanceText;
     [SerializeField] private TMP_Text frozenResistanceText;
@@ -79,7 +79,7 @@ public class PlayerInfoUI : MonoBehaviour
         evasionRateText.text = $"{unitStatContainer.GetStatValue(EStatType.EvasionRate)}%";
         penetrationRateText.text = $"{unitStatContainer.GetStatValue(EStatType.PenetrationRate)}%";
         igniteResistanceText.text = $"{unitStatContainer.GetStatValue(EStatType.IgniteResistance)}%";
-        poisionResistanceText.text = $"{unitStatContainer.GetStatValue(EStatType.PoisionResistance)}%";
+        poisonResistanceText.text = $"{unitStatContainer.GetStatValue(EStatType.PoisonResistance)}%";
         frozenResistanceText.text = $"{unitStatContainer.GetStatValue(EStatType.FrozenResistance)}%";
         bleedResistanceText.text = $"{unitStatContainer.GetStatValue(EStatType.BleedResistance)}%";
         damageCorrectionText.text = $"{unitStatContainer.GetStatValue(EStatType.DamageCorrection)}%";
@@ -108,7 +108,7 @@ public class PlayerInfoUI : MonoBehaviour
             case EStatType.EvasionRate: evasionRateText.text = $"{newValue}%"; break;
             case EStatType.PenetrationRate: penetrationRateText.text = $"{newValue}%"; break;
             case EStatType.IgniteResistance: igniteResistanceText.text = $"{newValue}%"; break;
-            case EStatType.PoisionResistance: poisionResistanceText.text = $"{newValue}%"; break;
+            case EStatType.PoisonResistance: poisonResistanceText.text = $"{newValue}%"; break;
             case EStatType.FrozenResistance: frozenResistanceText.text = $"{newValue}%"; break;
             case EStatType.BleedResistance: bleedResistanceText.text = $"{newValue}%"; break;
             case EStatType.DamageCorrection: damageCorrectionText.text = $"{newValue}%"; break;

@@ -21,7 +21,7 @@ public class SkillData : ScriptableObject
 
     [Header("Effects")]
     [SerializeReference,SubclassSelector]
-    private List<EffectExcution> effectList;
+    private List<EffectExecution> effectList;
 
 
     public ESkillRange SkillRange => skillRange;
@@ -31,7 +31,7 @@ public class SkillData : ScriptableObject
     public float CoolTime => coolTime;  
     public ESkillTrigger SkillTrigger => skillTriggerType;
     public float ManaCost => manaCost;
-    public List<EffectExcution> EffectList => effectList;
+    public List<EffectExecution> EffectList => effectList;
 }
 
 

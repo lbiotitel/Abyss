@@ -9,7 +9,7 @@ using UnityEngine;
 public class ReturnEffect : EffectBase
 {
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
         if (Managers.Battle.currentState == EBattleState.Battle) return;
         Managers.Game.InGame.GameOver();        

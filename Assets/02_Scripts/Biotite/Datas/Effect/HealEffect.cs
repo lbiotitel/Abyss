@@ -11,7 +11,7 @@ public class HealEffect : EffectBase
 {
     [SerializeField] private int healAmount;
 
-    public override void Excute(Unit source, Unit target)
+    public override void Execute(Unit source, Unit target)
     {
        
     }

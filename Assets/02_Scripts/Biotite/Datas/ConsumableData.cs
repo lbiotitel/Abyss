@@ -17,8 +17,8 @@ public class ConsumableData : ItemDataBase
     [Header("소모품 속성")]
     [SerializeField] private bool isPermanent = false;
     [Header("소모품 아이템 효과")]
-    [SerializeReference,SubclassSelector] private List<EffectExcution> effectExcutions;
+    [SerializeReference,SubclassSelector] private List<EffectExecution> effectExecutions;
 
-    public List<EffectExcution> EffectExcutions => effectExcutions;
+    public List<EffectExecution> EffectExecutions => effectExecutions;
     public bool IsPermanent => isPermanent; 
 }

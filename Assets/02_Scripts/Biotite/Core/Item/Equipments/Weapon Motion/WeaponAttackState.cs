@@ -40,9 +40,9 @@ public class WeaponAttackState : WeaponStateBase
     }
 
     
-    public override void AnimationFishedTrigger(EAnimationTriggerType animationTriggerType)
+    public override void AnimationFinishedTrigger(EAnimationTriggerType animationTriggerType)
     {
-        base.AnimationFishedTrigger(animationTriggerType);
+        base.AnimationFinishedTrigger(animationTriggerType);
         if (animationTriggerType == EAnimationTriggerType.ATTACK) attackAnimTrigger = true;
     }
 

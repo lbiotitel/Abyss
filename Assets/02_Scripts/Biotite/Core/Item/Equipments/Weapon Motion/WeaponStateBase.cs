@@ -36,7 +36,7 @@ public class WeaponStateBase
         this.animName = animName;
     }
 
-    public virtual void AnimationFishedTrigger(EAnimationTriggerType animationTriggerType)
+    public virtual void AnimationFinishedTrigger(EAnimationTriggerType animationTriggerType)
     {
         if(animationTriggerType == EAnimationTriggerType.FINISH)
             animFinishedTrigger = true;

@@ -13,11 +13,11 @@ public class ResourceStat : StatBase
     {
         baseValue = value;
         maxValue = baseValue;
-        linkStat.OnStatValueChanged += HandleLinkValueChnaged;
+        linkStat.OnStatValueChanged += HandleLinkValueChanged;
     }
 
 
-    private void HandleLinkValueChnaged(EStatType statType, float prevValue, float newValue)
+    private void HandleLinkValueChanged(EStatType statType, float prevValue, float newValue)
     {
         maxValue = newValue;
         float prev = baseValue;

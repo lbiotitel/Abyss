@@ -25,7 +25,7 @@ MonoBehaviour:
   height: 1
   width: 1
   isPermanent: 0
-  effectExcutions:
+  effectExecutions:
   - rid: 3475026384972152832
   references:
     version: 2
